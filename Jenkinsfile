@@ -15,7 +15,7 @@ timestamps() {
         pipelineTriggers([cron('H 2 * * *')])
     ])
     node('centos-7') {
-        def javaHome = tool 'temurin-jdk8-latest'
+        def javaHome = tool 'temurin-jdk11-latest'
         env.JAVA_HOME = "${javaHome}"
         def mvnHome = tool 'apache-maven-3.8.4'
         def mvnParams = '--batch-mode --update-snapshots -fae -Dmaven.repo.local=xpect-local-maven-repository -DtestOnly=false'
@@ -39,23 +39,15 @@ timestamps() {
             }
 
             stage('compile with Eclipse Luna and Xtext 2.9.2') {
-                sh "${mvnHome}/bin/mvn -P!tests -Declipsesign=true -Dtarget-platform=eclipse_4_4_2-xtext_2_9_2 ${mvnParams} clean install"
+                sh "${mvnHome}/bin/mvn -P!tests -Declipsesign=true -Dtarget-platform=eclipse_4_7_3-xtext_2_14_0 ${mvnParams} clean install"
                 archiveArtifacts artifacts: 'org.eclipse.xpect.releng/p2-repository/target/repository/**/*.*,org.eclipse.xpect.releng/p2-repository/target/org.eclipse.xpect.repository-*.zip'
             }
 
             wrap([$class: 'Xvnc', useXauthority: true]) {
 
-                stage('test with Eclipse Luna and Xtext 2.9.2') {
+                stage('test with Eclipse Oxygen and Xtext 2.14') {
                     try{
-                        sh "${mvnHome}/bin/mvn -P!plugins -P!xtext-examples -Dtarget-platform=eclipse_4_4_2-xtext_2_9_2 ${mvnParams} clean integration-test"
-                    }finally{
-                        junit '**/TEST-*.xml'
-                    }
-                }
-
-                stage('test with Eclipse Mars and Xtext 2.14') {
-                    try{
-                        sh "${mvnHome}/bin/mvn -P!plugins -P!xtext-examples -Dtarget-platform=eclipse_4_5_0-xtext_2_14_0 ${mvnParams} clean integration-test"
+                        sh "${mvnHome}/bin/mvn -DxtextVersion=2.14.0 -P!plugins -P!xtext-examples -Dtarget-platform=eclipse_4_7_3-xtext_2_14_0 ${mvnParams} clean integration-test"
                     }finally {
                         junit '**/TEST-*.xml'
                     }
@@ -63,7 +55,7 @@ timestamps() {
 
                 stage('test with Eclipse 2020-06 and Xtext nighly') {
                     try{
-                        sh "${mvnHome}/bin/mvn -P!plugins -P!xtext-examples -Dtarget-platform=eclipse_2020_06-xtext_nightly ${mvnParams} clean integration-test"
+                        sh "${mvnHome}/bin/mvn  -DxtextVersion=2.27.0-SNAPSHOT -Dmwe2Version=2.12.2 -P!plugins -P!xtext-examples -Dtarget-platform=eclipse_2020_06-xtext_nightly ${mvnParams} clean integration-test"
                     }finally {
                         junit '**/TEST-*.xml'
                     }

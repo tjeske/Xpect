@@ -22,7 +22,8 @@ var genmodelURI = "platform:/resource/${projectName}/model/Xpect.genmodel"
 var xpectEcoreURI = "platform:/resource/${projectName}/model/Xpect.ecore"
 var xjmEcoreURI = "platform:/resource/${projectName}/model/XpectJavaModel.ecore"
 var file.extensions = "xpect"
-var runtimeProject = "../${projectName}"
+var rootPath=".."
+var runtimeProject = "${rootPath}/${projectName}"
 
 Workflow {
 	bean = StandaloneSetup {

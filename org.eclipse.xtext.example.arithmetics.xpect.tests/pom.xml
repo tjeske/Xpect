@@ -20,8 +20,8 @@ Contributors:
 	<properties>
 		<os-jvm-flags />
 		<memory-settings>-Xmx1G</memory-settings>
-		<tycho-version>1.7.0</tycho-version>
-		<target-platform>eclipse_4_4_2-xtext_2_9_2</target-platform>
+		<tycho-version>2.5.0</tycho-version>
+		<target-platform>eclipse_4_7_3-xtext_2_14_0</target-platform>
 		<target-platform-version>0.2.0-SNAPSHOT</target-platform-version>
 	</properties>
 
@@ -60,6 +60,7 @@ Contributors:
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
+					<executionEnvironment>JavaSE-1.8</executionEnvironment>
 					<target>
 						<artifact>
 							<groupId>org.eclipse.xpect</groupId>
@@ -91,7 +92,7 @@ Contributors:
 			<plugin>
 				<groupId>org.eclipse.xtend</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
-				<version>2.9.2</version>
+				<version>2.17.1</version>
 				<executions>
 					<execution>
 						<goals>

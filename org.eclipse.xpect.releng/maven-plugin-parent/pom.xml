@@ -15,9 +15,9 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<target-platform>eclipse_4_4_2-xtext_2_9_2</target-platform>
+		<target-platform>eclipse_4_7_3-xtext_2_14_0</target-platform>
 		<xtend-compiler-version>2.9.2</xtend-compiler-version>
-		<tycho-version>1.7.0</tycho-version>
+		<tycho-version>2.5.0</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<target-platform-version>0.2.0-SNAPSHOT</target-platform-version>
 	</properties>
@@ -63,6 +63,7 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
+					<executionEnvironment>JavaSE-1.8</executionEnvironment>
 					<target>
 						<artifact>
 							<groupId>org.eclipse.xpect</groupId>
@@ -198,27 +199,15 @@
 			</modules>
 		</profile>
 		<profile>
-			<id>eclipse_4_5_0-xtext_2_14_0</id>
+			<id>eclipse_4_7_3-xtext_2_14_0</id>
 			<activation>
 				<property>
 					<name>target-platform</name>
-					<value>eclipse_4_5_0-xtext_2_14_0</value>
+					<value>eclipse_4_7_3-xtext_2_14_0</value>
 				</property>
 			</activation>
 			<modules>
-				<module>../target-platforms/eclipse_4_5_0-xtext_2_14_0</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>eclipse_4_4_2-xtext_2_9_2</id>
-			<activation>
-				<property>
-					<name>target-platform</name>
-					<value>eclipse_4_4_2-xtext_2_9_2</value>
-				</property>
-			</activation>
-			<modules>
-				<module>../target-platforms/eclipse_4_4_2-xtext_2_9_2</module>
+				<module>../target-platforms/eclipse_4_7_3-xtext_2_14_0</module>
 			</modules>
 		</profile>
 		<profile>
