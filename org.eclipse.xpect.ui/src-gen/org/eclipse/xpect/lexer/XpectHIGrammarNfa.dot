@@ -1,0 +1,151 @@
+## This is a Graphviz .dot file (http://www.graphviz.org/)
+## You can use the command 'dot -Tpdf this.dot > out.pdf' to render it.
+digraph G {
+subgraph cluster_lexicalgroup435175610 {
+label="Lexicalspace_Setup\nWS, ML_COMMENT, SL_COMMENT";
+tokennfastate1073364187 [label=ID];
+tokennfastate1365077151 [label=ID];
+tokennfastate1327479036 [label=STRING];
+tokennfastate1307544234 [label=ID];
+tokennfastate1045277643 [label="'XPECT_SETUP'"];
+tokennfastate1297528817 [label="'END_SETUP'"];
+tokennfastate1973160980 [label="'{'"];
+tokennfastate1815589086 [label="'false'"];
+tokennfastate724715512 [label="'.'"];
+tokennfastate1902949568 [label="'}'"];
+tokennfastate1631747283 [label="'='"];
+tokennfastate1137474487 [label="'{'"];
+tokennfastate774574864 [label=INT];
+tokennfastate2144071031 [label="'}'"];
+tokennfastate723844282 [label="'true'"];
+}
+
+subgraph cluster_lexicalgroup1803361784 {
+label="Lexicalspace_Invocation\nWS, ML_COMMENT, SL_COMMENT";
+tokennfastate859485976 [label=INVOCATION];
+tokennfastate1677168793 [label="'!'"];
+tokennfastate1842764665 [label="'XPECT'"];
+tokennfastate1509075433 [label="'FIXME'"];
+}
+
+subgraph cluster_lexicalgroup1329897103 {
+label="XpectFile\n";
+tokennfastate530465490 [shape=diamond,label=stop];
+tokennfastate1616253157 [label="'XPECT_IGNORE'"];
+tokennfastate1064783200 [label="ANY_OTHER+"];
+tokennfastate212282107 [shape=diamond,label=start];
+}
+
+tokennfastate1073364187->tokennfastate1137474487 [];
+tokennfastate1073364187->tokennfastate723844282 [];
+tokennfastate1073364187->tokennfastate1815589086 [];
+tokennfastate1073364187->tokennfastate774574864 [];
+tokennfastate1073364187->tokennfastate1327479036 [];
+tokennfastate1073364187->tokennfastate1902949568 [];
+tokennfastate1073364187->tokennfastate1307544234 [];
+tokennfastate1073364187->tokennfastate1365077151 [];
+tokennfastate1073364187->tokennfastate2144071031 [];
+tokennfastate1073364187->tokennfastate1297528817 [];
+tokennfastate1073364187->tokennfastate1973160980 [];
+tokennfastate1073364187->tokennfastate724715512 [];
+tokennfastate1365077151->tokennfastate1631747283 [];
+tokennfastate1327479036->tokennfastate1973160980 [];
+tokennfastate1327479036->tokennfastate1902949568 [];
+tokennfastate1327479036->tokennfastate1307544234 [];
+tokennfastate1327479036->tokennfastate1365077151 [];
+tokennfastate1327479036->tokennfastate2144071031 [];
+tokennfastate1327479036->tokennfastate1297528817 [];
+tokennfastate1327479036->tokennfastate1137474487 [];
+tokennfastate1327479036->tokennfastate723844282 [];
+tokennfastate1327479036->tokennfastate1815589086 [];
+tokennfastate1327479036->tokennfastate774574864 [];
+tokennfastate1327479036->tokennfastate1327479036 [];
+tokennfastate1307544234->tokennfastate1297528817 [];
+tokennfastate1307544234->tokennfastate1307544234 [];
+tokennfastate1307544234->tokennfastate1365077151 [];
+tokennfastate1307544234->tokennfastate724715512 [];
+tokennfastate1307544234->tokennfastate1902949568 [];
+tokennfastate1307544234->tokennfastate2144071031 [];
+tokennfastate1307544234->tokennfastate723844282 [];
+tokennfastate1307544234->tokennfastate1815589086 [];
+tokennfastate1307544234->tokennfastate774574864 [];
+tokennfastate1307544234->tokennfastate1327479036 [];
+tokennfastate1307544234->tokennfastate1973160980 [];
+tokennfastate1307544234->tokennfastate1137474487 [];
+tokennfastate1045277643->tokennfastate1297528817 [];
+tokennfastate1045277643->tokennfastate1307544234 [];
+tokennfastate1045277643->tokennfastate1365077151 [];
+tokennfastate1297528817->tokennfastate1064783200 [];
+tokennfastate1973160980->tokennfastate2144071031 [];
+tokennfastate1973160980->tokennfastate1365077151 [];
+tokennfastate1973160980->tokennfastate1307544234 [];
+tokennfastate1815589086->tokennfastate1973160980 [];
+tokennfastate1815589086->tokennfastate1902949568 [];
+tokennfastate1815589086->tokennfastate1307544234 [];
+tokennfastate1815589086->tokennfastate1365077151 [];
+tokennfastate1815589086->tokennfastate2144071031 [];
+tokennfastate1815589086->tokennfastate1297528817 [];
+tokennfastate1815589086->tokennfastate1137474487 [];
+tokennfastate1815589086->tokennfastate723844282 [];
+tokennfastate1815589086->tokennfastate1815589086 [];
+tokennfastate1815589086->tokennfastate774574864 [];
+tokennfastate1815589086->tokennfastate1327479036 [];
+tokennfastate724715512->tokennfastate1073364187 [];
+tokennfastate1902949568->tokennfastate1297528817 [];
+tokennfastate1902949568->tokennfastate1307544234 [];
+tokennfastate1902949568->tokennfastate1365077151 [];
+tokennfastate1902949568->tokennfastate1902949568 [];
+tokennfastate1902949568->tokennfastate2144071031 [];
+tokennfastate1631747283->tokennfastate1307544234 [];
+tokennfastate1631747283->tokennfastate1973160980 [];
+tokennfastate1631747283->tokennfastate723844282 [];
+tokennfastate1631747283->tokennfastate1815589086 [];
+tokennfastate1631747283->tokennfastate774574864 [];
+tokennfastate1631747283->tokennfastate1327479036 [];
+tokennfastate1137474487->tokennfastate1902949568 [];
+tokennfastate1137474487->tokennfastate1307544234 [];
+tokennfastate1137474487->tokennfastate1365077151 [];
+tokennfastate774574864->tokennfastate1973160980 [];
+tokennfastate774574864->tokennfastate1902949568 [];
+tokennfastate774574864->tokennfastate1307544234 [];
+tokennfastate774574864->tokennfastate1365077151 [];
+tokennfastate774574864->tokennfastate2144071031 [];
+tokennfastate774574864->tokennfastate1297528817 [];
+tokennfastate774574864->tokennfastate1137474487 [];
+tokennfastate774574864->tokennfastate723844282 [];
+tokennfastate774574864->tokennfastate1815589086 [];
+tokennfastate774574864->tokennfastate774574864 [];
+tokennfastate774574864->tokennfastate1327479036 [];
+tokennfastate2144071031->tokennfastate1902949568 [];
+tokennfastate2144071031->tokennfastate1307544234 [];
+tokennfastate2144071031->tokennfastate1365077151 [];
+tokennfastate2144071031->tokennfastate2144071031 [];
+tokennfastate2144071031->tokennfastate1297528817 [];
+tokennfastate723844282->tokennfastate1973160980 [];
+tokennfastate723844282->tokennfastate1902949568 [];
+tokennfastate723844282->tokennfastate1307544234 [];
+tokennfastate723844282->tokennfastate1365077151 [];
+tokennfastate723844282->tokennfastate2144071031 [];
+tokennfastate723844282->tokennfastate1297528817 [];
+tokennfastate723844282->tokennfastate1137474487 [];
+tokennfastate723844282->tokennfastate723844282 [];
+tokennfastate723844282->tokennfastate1815589086 [];
+tokennfastate723844282->tokennfastate774574864 [];
+tokennfastate723844282->tokennfastate1327479036 [];
+tokennfastate859485976->tokennfastate1064783200 [];
+tokennfastate1677168793->tokennfastate859485976 [];
+tokennfastate1677168793->tokennfastate1509075433 [];
+tokennfastate1842764665->tokennfastate859485976 [];
+tokennfastate1842764665->tokennfastate1677168793 [];
+tokennfastate1842764665->tokennfastate1509075433 [];
+tokennfastate1509075433->tokennfastate859485976 [];
+tokennfastate1616253157->tokennfastate1064783200 [];
+tokennfastate1064783200->tokennfastate1616253157 [];
+tokennfastate1064783200->tokennfastate1045277643 [];
+tokennfastate1064783200->tokennfastate1842764665 [];
+tokennfastate1064783200->tokennfastate530465490 [];
+tokennfastate1064783200->tokennfastate1064783200 [];
+tokennfastate212282107->tokennfastate530465490 [];
+tokennfastate212282107->tokennfastate1064783200 [];
+}
+
