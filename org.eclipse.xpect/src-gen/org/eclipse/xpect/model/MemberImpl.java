@@ -34,10 +34,10 @@ import org.eclipse.xpect.XpectPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.MemberImpl#getFile <em>File</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -69,6 +69,7 @@ public class MemberImpl extends EObjectImpl implements Member
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectFile getFile()
 	{
 		if (eContainerFeatureID() != XpectPackage.MEMBER__FILE) return null;
@@ -91,6 +92,7 @@ public class MemberImpl extends EObjectImpl implements Member
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFile(XpectFile newFile)
 	{
 		if (newFile != eInternalContainer() || (eContainerFeatureID() != XpectPackage.MEMBER__FILE && newFile != null))

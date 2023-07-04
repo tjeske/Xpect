@@ -157,7 +157,6 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	{
 		super(eNS_URI, XpectJavaModelFactory.eINSTANCE);
 	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -167,7 +166,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link XpectJavaModelPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -182,7 +181,8 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 		if (isInited) return (XpectJavaModelPackage)EPackage.Registry.INSTANCE.getEPackage(XpectJavaModelPackage.eNS_URI);
 
 		// Obtain or create and register package
-		XpectJavaModelPackageImpl theXpectJavaModelPackage = (XpectJavaModelPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof XpectJavaModelPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new XpectJavaModelPackageImpl());
+		Object registeredXpectJavaModelPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		XpectJavaModelPackageImpl theXpectJavaModelPackage = registeredXpectJavaModelPackage instanceof XpectJavaModelPackageImpl ? (XpectJavaModelPackageImpl)registeredXpectJavaModelPackage : new XpectJavaModelPackageImpl();
 
 		isInited = true;
 
@@ -190,7 +190,8 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 		TypesPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		XpectPackageImpl theXpectPackage = (XpectPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(XpectPackage.eNS_URI) instanceof XpectPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(XpectPackage.eNS_URI) : XpectPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(XpectPackage.eNS_URI);
+		XpectPackageImpl theXpectPackage = (XpectPackageImpl)(registeredPackage instanceof XpectPackageImpl ? registeredPackage : XpectPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theXpectJavaModelPackage.createPackageContents();
@@ -203,7 +204,6 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 		// Mark meta-data to indicate it can't be changed
 		theXpectJavaModelPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(XpectJavaModelPackage.eNS_URI, theXpectJavaModelPackage);
 		return theXpectJavaModelPackage;
@@ -214,6 +214,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getXpectJavaModel()
 	{
 		return xpectJavaModelEClass;
@@ -224,6 +225,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXpectJavaModel_TestOrSuite()
 	{
 		return (EReference)xpectJavaModelEClass.getEStructuralFeatures().get(0);
@@ -234,6 +236,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXpectJavaModel_Contributions()
 	{
 		return (EReference)xpectJavaModelEClass.getEStructuralFeatures().get(1);
@@ -244,6 +247,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXpectJavaModel_Tests()
 	{
 		return (EReference)xpectJavaModelEClass.getEStructuralFeatures().get(2);
@@ -254,6 +258,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXpectJavaModel_Methods()
 	{
 		return (EReference)xpectJavaModelEClass.getEStructuralFeatures().get(3);
@@ -264,6 +269,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getXjmElement()
 	{
 		return xjmElementEClass;
@@ -274,6 +280,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXjmElement_Imports()
 	{
 		return (EReference)xjmElementEClass.getEStructuralFeatures().get(0);
@@ -284,6 +291,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getXjmClass()
 	{
 		return xjmClassEClass;
@@ -294,6 +302,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXjmClass_JvmClass()
 	{
 		return (EReference)xjmClassEClass.getEStructuralFeatures().get(0);
@@ -304,6 +313,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getXjmClass_JavaClass()
 	{
 		return (EAttribute)xjmClassEClass.getEStructuralFeatures().get(1);
@@ -314,6 +324,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getXjmTest()
 	{
 		return xjmTestEClass;
@@ -324,6 +335,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXjmTest_Methods()
 	{
 		return (EReference)xjmTestEClass.getEStructuralFeatures().get(0);
@@ -334,6 +346,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getXjmContribution()
 	{
 		return xjmContributionEClass;
@@ -344,6 +357,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getXjmContribution_Roles()
 	{
 		return (EAttribute)xjmContributionEClass.getEStructuralFeatures().get(0);
@@ -354,6 +368,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getXjmContribution_Environments()
 	{
 		return (EAttribute)xjmContributionEClass.getEStructuralFeatures().get(1);
@@ -364,6 +379,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getXjmContribution_DeactivationReason()
 	{
 		return (EAttribute)xjmContributionEClass.getEStructuralFeatures().get(2);
@@ -374,6 +390,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXjmContribution_ReplacedBy()
 	{
 		return (EReference)xjmContributionEClass.getEStructuralFeatures().get(3);
@@ -384,6 +401,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getXjmMethod()
 	{
 		return xjmMethodEClass;
@@ -394,6 +412,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXjmMethod_Test()
 	{
 		return (EReference)xjmMethodEClass.getEStructuralFeatures().get(0);
@@ -404,6 +423,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getXjmMethod_JvmMethod()
 	{
 		return (EReference)xjmMethodEClass.getEStructuralFeatures().get(1);
@@ -414,6 +434,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getXjmMethod_JavaMethod()
 	{
 		return (EAttribute)xjmMethodEClass.getEStructuralFeatures().get(2);
@@ -424,6 +445,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getXjmTestMethod()
 	{
 		return xjmTestMethodEClass;
@@ -434,6 +456,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getXjmXpectMethod()
 	{
 		return xjmXpectMethodEClass;
@@ -444,6 +467,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNameToMethodEntry()
 	{
 		return nameToMethodEntryEClass;
@@ -454,6 +478,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNameToMethodEntry_Key()
 	{
 		return (EAttribute)nameToMethodEntryEClass.getEStructuralFeatures().get(0);
@@ -464,6 +489,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNameToMethodEntry_Value()
 	{
 		return (EReference)nameToMethodEntryEClass.getEStructuralFeatures().get(1);
@@ -474,6 +500,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getEnvironment()
 	{
 		return environmentEEnum;
@@ -484,6 +511,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getJavaMethod()
 	{
 		return javaMethodEDataType;
@@ -494,6 +522,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getJavaAnnotation()
 	{
 		return javaAnnotationEDataType;
@@ -504,6 +533,7 @@ public class XpectJavaModelPackageImpl extends EPackageImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectJavaModelFactory getXpectJavaModelFactory()
 	{
 		return (XpectJavaModelFactory)getEFactoryInstance();

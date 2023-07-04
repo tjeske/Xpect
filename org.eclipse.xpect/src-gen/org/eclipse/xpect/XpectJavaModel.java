@@ -13,8 +13,6 @@
  */
 package org.eclipse.xpect;
 
-import java.lang.Iterable;
-
 import java.lang.annotation.Annotation;
 
 import org.eclipse.emf.common.util.EList;
@@ -29,13 +27,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.XpectJavaModel#getTestOrSuite <em>Test Or Suite</em>}</li>
  *   <li>{@link org.eclipse.xpect.XpectJavaModel#getContributions <em>Contributions</em>}</li>
  *   <li>{@link org.eclipse.xpect.XpectJavaModel#getTests <em>Tests</em>}</li>
  *   <li>{@link org.eclipse.xpect.XpectJavaModel#getMethods <em>Methods</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.xpect.XpectJavaModelPackage#getXpectJavaModel()
  * @model
@@ -46,10 +44,6 @@ public interface XpectJavaModel extends EObject
 	/**
 	 * Returns the value of the '<em><b>Test Or Suite</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Test Or Suite</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Test Or Suite</em>' reference.
 	 * @see #setTestOrSuite(XjmTest)
@@ -73,10 +67,6 @@ public interface XpectJavaModel extends EObject
 	 * Returns the value of the '<em><b>Contributions</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.xpect.XjmContribution}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Contributions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contributions</em>' containment reference list.
 	 * @see org.eclipse.xpect.XpectJavaModelPackage#getXpectJavaModel_Contributions()
@@ -89,10 +79,6 @@ public interface XpectJavaModel extends EObject
 	 * Returns the value of the '<em><b>Tests</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.xpect.XjmTest}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tests</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tests</em>' containment reference list.
 	 * @see org.eclipse.xpect.XpectJavaModelPackage#getXpectJavaModel_Tests()
@@ -106,14 +92,10 @@ public interface XpectJavaModel extends EObject
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link org.eclipse.xpect.XjmMethod},
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Methods</em>' map isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Methods</em>' map.
 	 * @see org.eclipse.xpect.XpectJavaModelPackage#getXpectJavaModel_Methods()
-	 * @model mapType="org.eclipse.xpect.NameToMethodEntry<org.eclipse.emf.ecore.EString, org.eclipse.xpect.XjmMethod>"
+	 * @model mapType="org.eclipse.xpect.NameToMethodEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.xpect.XjmMethod&gt;"
 	 * @generated
 	 */
 	EMap<String, XjmMethod> getMethods();
@@ -121,7 +103,7 @@ public interface XpectJavaModel extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.xtext.common.types.Iterable<org.eclipse.xpect.XjmContribution>"
+	 * @model dataType="org.eclipse.xtext.common.types.Iterable&lt;org.eclipse.xpect.XjmContribution&gt;"
 	 * @generated
 	 */
 	Iterable<XjmContribution> getContributions(Class<? extends Annotation> role);
@@ -129,7 +111,7 @@ public interface XpectJavaModel extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.xtext.common.types.Iterable<org.eclipse.xpect.XjmContribution>"
+	 * @model dataType="org.eclipse.xtext.common.types.Iterable&lt;org.eclipse.xpect.XjmContribution&gt;"
 	 * @generated
 	 */
 	Iterable<XjmContribution> getContributions(Class<? extends Annotation> role, Environment environment);

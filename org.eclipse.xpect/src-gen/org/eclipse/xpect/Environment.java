@@ -63,10 +63,6 @@ public enum Environment implements Enumerator
 	/**
 	 * The '<em><b>STANDALONE TEST</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>STANDALONE TEST</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #STANDALONE_TEST
 	 * @model
@@ -78,10 +74,6 @@ public enum Environment implements Enumerator
 	/**
 	 * The '<em><b>PLUGIN TEST</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>PLUGIN TEST</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PLUGIN_TEST
 	 * @model
@@ -93,10 +85,6 @@ public enum Environment implements Enumerator
 	/**
 	 * The '<em><b>WORKBENCH</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>WORKBENCH</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #WORKBENCH
 	 * @model
@@ -131,6 +119,8 @@ public enum Environment implements Enumerator
 	 * Returns the '<em><b>Environment</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static Environment get(String literal)
@@ -150,6 +140,8 @@ public enum Environment implements Enumerator
 	 * Returns the '<em><b>Environment</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static Environment getByName(String name)
@@ -169,6 +161,8 @@ public enum Environment implements Enumerator
 	 * Returns the '<em><b>Environment</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static Environment get(int value)
@@ -221,6 +215,7 @@ public enum Environment implements Enumerator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue()
 	{
 	  return value;
@@ -231,6 +226,7 @@ public enum Environment implements Enumerator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName()
 	{
 	  return name;
@@ -241,6 +237,7 @@ public enum Environment implements Enumerator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral()
 	{
 	  return literal;

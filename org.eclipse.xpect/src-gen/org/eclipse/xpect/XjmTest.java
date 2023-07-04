@@ -22,10 +22,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.XjmTest#getMethods <em>Methods</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.xpect.XpectJavaModelPackage#getXjmTest()
  * @model
@@ -38,10 +38,6 @@ public interface XjmTest extends XjmClass
 	 * The list contents are of type {@link org.eclipse.xpect.XjmMethod}.
 	 * It is bidirectional and its opposite is '{@link org.eclipse.xpect.XjmMethod#getTest <em>Test</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Methods</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Methods</em>' containment reference list.
 	 * @see org.eclipse.xpect.XpectJavaModelPackage#getXjmTest_Methods()

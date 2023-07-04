@@ -24,10 +24,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.XjmElement#getImports <em>Imports</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.xpect.XpectJavaModelPackage#getXjmElement()
  * @model
@@ -39,10 +39,6 @@ public interface XjmElement extends EObject
 	 * Returns the value of the '<em><b>Imports</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.xpect.XjmClass}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Imports</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Imports</em>' reference list.
 	 * @see org.eclipse.xpect.XpectJavaModelPackage#getXjmElement_Imports()

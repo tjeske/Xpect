@@ -22,10 +22,10 @@ import org.eclipse.xtext.common.types.JvmDeclaredType;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.XpectTest#getDeclaredSuite <em>Declared Suite</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.xpect.XpectPackage#getXpectTest()
  * @model
@@ -36,10 +36,6 @@ public interface XpectTest extends Member, AbstractComponent
 	/**
 	 * Returns the value of the '<em><b>Declared Suite</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Declared Suite</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Declared Suite</em>' reference.
 	 * @see #setDeclaredSuite(JvmDeclaredType)

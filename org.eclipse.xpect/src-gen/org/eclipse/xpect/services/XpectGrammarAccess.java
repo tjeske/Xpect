@@ -120,10 +120,12 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 		//Lexicalspace_Setup XpectTest hidden(WS, ML_COMMENT, SL_COMMENT):
 		//	{XpectTest} "XPECT_SETUP" declaredSuite=[types::JvmDeclaredType|QualifiedName]?
 		//	assignments+=Assignment*
-		//	"END_SETUP"
+		//	"END_SETUP";
 		@Override public ParserRule getRule() { return rule; }
 
-		//{XpectTest} "XPECT_SETUP" declaredSuite=[types::JvmDeclaredType|QualifiedName]? assignments+=Assignment* "END_SETUP"
+		//{XpectTest} "XPECT_SETUP" declaredSuite=[types::JvmDeclaredType|QualifiedName]?
+		//assignments+=Assignment*
+		//"END_SETUP"
 		public Group getGroup() { return cGroup; }
 
 		//{XpectTest}
@@ -240,11 +242,11 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ComponentLong Component:
 		//	{Component} componentClass=[types::JvmDeclaredType|QualifiedName] parameters+=Literal* ("{" assignments+=Assignment*
-		//	"}")
+		//	"}");
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Component} componentClass=[types::JvmDeclaredType|QualifiedName] parameters+=Literal* ("{" assignments+=Assignment*
-		//"}")
+		//{Component} componentClass=[types::JvmDeclaredType|QualifiedName] parameters+=Literal* ("{" assignments+=Assignment* "}"
+		//)
 		public Group getGroup() { return cGroup; }
 
 		//{Component}
@@ -265,7 +267,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 		//Literal
 		public RuleCall getParametersLiteralParserRuleCall_2_0() { return cParametersLiteralParserRuleCall_2_0; }
 
-		//("{" assignments+=Assignment* "}")
+		//"{" assignments+=Assignment* "}"
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
@@ -299,7 +301,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ComponentInline Component:
 		//	{Component} (componentClass=[types::JvmDeclaredType|QualifiedName] parameters+=Literal*)? ("{"
-		//	assignments+=Assignment* "}")
+		//	assignments+=Assignment* "}");
 		@Override public ParserRule getRule() { return rule; }
 
 		//{Component} (componentClass=[types::JvmDeclaredType|QualifiedName] parameters+=Literal*)? ("{" assignments+=Assignment*
@@ -327,7 +329,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 		//Literal
 		public RuleCall getParametersLiteralParserRuleCall_1_1_0() { return cParametersLiteralParserRuleCall_1_1_0; }
 
-		//("{" assignments+=Assignment* "}")
+		//"{" assignments+=Assignment* "}"
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"{"
@@ -374,7 +376,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 		//{BooleanLiteral}
 		public Action getBooleanLiteralAction_0_0() { return cBooleanLiteralAction_0_0; }
 
-		//(value?="true" | "false")
+		//value?="true" | "false"
 		public Alternatives getAlternatives_0_1() { return cAlternatives_0_1; }
 
 		//value?="true"
@@ -472,7 +474,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMethodXjmXpectMethodINVOCATIONTerminalRuleCall_3_0_1 = (RuleCall)cMethodXjmXpectMethodCrossReference_3_0.eContents().get(1);
 		
 		//Lexicalspace_Invocation XpectInvocation hidden(WS, ML_COMMENT, SL_COMMENT):
-		//	"XPECT" ignore?="!"? fixme?="FIXME"? method=[xjm::XjmXpectMethod|INVOCATION]
+		//	"XPECT" ignore?="!"? fixme?="FIXME"? method=[xjm::XjmXpectMethod|INVOCATION];
 		@Override public ParserRule getRule() { return rule; }
 
 		//"XPECT" ignore?="!"? fixme?="FIXME"? method=[xjm::XjmXpectMethod|INVOCATION]
@@ -652,7 +654,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 	//Lexicalspace_Setup XpectTest hidden(WS, ML_COMMENT, SL_COMMENT):
 	//	{XpectTest} "XPECT_SETUP" declaredSuite=[types::JvmDeclaredType|QualifiedName]?
 	//	assignments+=Assignment*
-	//	"END_SETUP"
+	//	"END_SETUP";
 	public Lexicalspace_SetupElements getLexicalspace_SetupAccess() {
 		return pLexicalspace_Setup;
 	}
@@ -683,7 +685,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ComponentLong Component:
 	//	{Component} componentClass=[types::JvmDeclaredType|QualifiedName] parameters+=Literal* ("{" assignments+=Assignment*
-	//	"}")
+	//	"}");
 	public ComponentLongElements getComponentLongAccess() {
 		return pComponentLong;
 	}
@@ -694,7 +696,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ComponentInline Component:
 	//	{Component} (componentClass=[types::JvmDeclaredType|QualifiedName] parameters+=Literal*)? ("{"
-	//	assignments+=Assignment* "}")
+	//	assignments+=Assignment* "}");
 	public ComponentInlineElements getComponentInlineAccess() {
 		return pComponentInline;
 	}
@@ -734,7 +736,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Lexicalspace_Invocation XpectInvocation hidden(WS, ML_COMMENT, SL_COMMENT):
-	//	"XPECT" ignore?="!"? fixme?="FIXME"? method=[xjm::XjmXpectMethod|INVOCATION]
+	//	"XPECT" ignore?="!"? fixme?="FIXME"? method=[xjm::XjmXpectMethod|INVOCATION];
 	public Lexicalspace_InvocationElements getLexicalspace_InvocationAccess() {
 		return pLexicalspace_Invocation;
 	}
@@ -789,7 +791,7 @@ public class XpectGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal ML_COMMENT:
-	//	'/ *'->'* /';
+	//	'/*'->'*/';
 	public TerminalRule getML_COMMENTRule() {
 		return tML_COMMENT;
 	} 

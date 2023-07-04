@@ -34,11 +34,11 @@ import org.eclipse.xpect.XpectJavaModelPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.NameToMethodEntryImpl#getTypedKey <em>Key</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.NameToMethodEntryImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -248,7 +248,7 @@ public class NameToMethodEntryImpl extends EObjectImpl implements BasicEMap.Entr
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (key: ");
 		result.append(key);
 		result.append(')');
@@ -267,6 +267,7 @@ public class NameToMethodEntryImpl extends EObjectImpl implements BasicEMap.Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getHash()
 	{
 		if (hash == -1)
@@ -282,6 +283,7 @@ public class NameToMethodEntryImpl extends EObjectImpl implements BasicEMap.Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHash(int hash)
 	{
 		this.hash = hash;
@@ -292,6 +294,7 @@ public class NameToMethodEntryImpl extends EObjectImpl implements BasicEMap.Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getKey()
 	{
 		return getTypedKey();
@@ -302,6 +305,7 @@ public class NameToMethodEntryImpl extends EObjectImpl implements BasicEMap.Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKey(String key)
 	{
 		setTypedKey(key);
@@ -312,6 +316,7 @@ public class NameToMethodEntryImpl extends EObjectImpl implements BasicEMap.Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XjmMethod getValue()
 	{
 		return getTypedValue();
@@ -322,6 +327,7 @@ public class NameToMethodEntryImpl extends EObjectImpl implements BasicEMap.Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XjmMethod setValue(XjmMethod value)
 	{
 		XjmMethod oldValue = getValue();
