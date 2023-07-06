@@ -34,8 +34,8 @@ public class XpectHI extends Lexer {
     public static final int RULE_ML_COMMENT=20;
 
     	// state XpectFile = 4
-    	// state Lexicalspace_Setup = 1
-    	// state Lexicalspace_Invocation = 2
+    	// state Lexicalspace_Setup = 2
+    	// state Lexicalspace_Invocation = 1
     	private int tokenstate = 4;
 
 
@@ -89,7 +89,7 @@ public class XpectHI extends Lexer {
             }
             match("XPECT_SETUP"); 
 
-            tokenstate=1;
+            tokenstate=2;
 
             }
 
@@ -114,7 +114,7 @@ public class XpectHI extends Lexer {
             }
             match("XPECT"); 
 
-            tokenstate=2;
+            tokenstate=1;
 
             }
 
@@ -134,8 +134,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:24:11: ({...}? => '=' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:24:13: {...}? => '='
             {
-            if ( !(((tokenstate & 1) != 0 && matches("="))) ) {
-                throw new FailedPredicateException(input, "EqualsSign", "(tokenstate & 1) != 0 && matches(\"=\")");
+            if ( !(((tokenstate & 2) != 0 && matches("="))) ) {
+                throw new FailedPredicateException(input, "EqualsSign", "(tokenstate & 2) != 0 && matches(\"=\")");
             }
             match('='); 
 
@@ -157,8 +157,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:25:17: ({...}? => '{' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:25:19: {...}? => '{'
             {
-            if ( !(((tokenstate & 1) != 0 && matches("{"))) ) {
-                throw new FailedPredicateException(input, "LeftCurlyBracket", "(tokenstate & 1) != 0 && matches(\"{\")");
+            if ( !(((tokenstate & 2) != 0 && matches("{"))) ) {
+                throw new FailedPredicateException(input, "LeftCurlyBracket", "(tokenstate & 2) != 0 && matches(\"{\")");
             }
             match('{'); 
 
@@ -180,8 +180,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:26:18: ({...}? => '}' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:26:20: {...}? => '}'
             {
-            if ( !(((tokenstate & 1) != 0 && matches("}"))) ) {
-                throw new FailedPredicateException(input, "RightCurlyBracket", "(tokenstate & 1) != 0 && matches(\"}\")");
+            if ( !(((tokenstate & 2) != 0 && matches("}"))) ) {
+                throw new FailedPredicateException(input, "RightCurlyBracket", "(tokenstate & 2) != 0 && matches(\"}\")");
             }
             match('}'); 
 
@@ -203,8 +203,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:27:5: ({...}? => 'true' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:27:7: {...}? => 'true'
             {
-            if ( !(((tokenstate & 1) != 0 && matches("true"))) ) {
-                throw new FailedPredicateException(input, "True", "(tokenstate & 1) != 0 && matches(\"true\")");
+            if ( !(((tokenstate & 2) != 0 && matches("true"))) ) {
+                throw new FailedPredicateException(input, "True", "(tokenstate & 2) != 0 && matches(\"true\")");
             }
             match("true"); 
 
@@ -227,8 +227,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:28:6: ({...}? => 'false' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:28:8: {...}? => 'false'
             {
-            if ( !(((tokenstate & 1) != 0 && matches("false"))) ) {
-                throw new FailedPredicateException(input, "False", "(tokenstate & 1) != 0 && matches(\"false\")");
+            if ( !(((tokenstate & 2) != 0 && matches("false"))) ) {
+                throw new FailedPredicateException(input, "False", "(tokenstate & 2) != 0 && matches(\"false\")");
             }
             match("false"); 
 
@@ -251,8 +251,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:29:9: ({...}? => '.' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:29:11: {...}? => '.'
             {
-            if ( !(((tokenstate & 1) != 0 && matches("."))) ) {
-                throw new FailedPredicateException(input, "FullStop", "(tokenstate & 1) != 0 && matches(\".\")");
+            if ( !(((tokenstate & 2) != 0 && matches("."))) ) {
+                throw new FailedPredicateException(input, "FullStop", "(tokenstate & 2) != 0 && matches(\".\")");
             }
             match('.'); 
 
@@ -274,8 +274,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:30:10: ({...}? => 'END_SETUP' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:30:12: {...}? => 'END_SETUP'
             {
-            if ( !(((tokenstate & 1) != 0 && matches("END_SETUP"))) ) {
-                throw new FailedPredicateException(input, "END_SETUP", "(tokenstate & 1) != 0 && matches(\"END_SETUP\")");
+            if ( !(((tokenstate & 2) != 0 && matches("END_SETUP"))) ) {
+                throw new FailedPredicateException(input, "END_SETUP", "(tokenstate & 2) != 0 && matches(\"END_SETUP\")");
             }
             match("END_SETUP"); 
 
@@ -299,8 +299,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:31:16: ({...}? => '!' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:31:18: {...}? => '!'
             {
-            if ( !(((tokenstate & 2) != 0 && matches("!"))) ) {
-                throw new FailedPredicateException(input, "ExclamationMark", "(tokenstate & 2) != 0 && matches(\"!\")");
+            if ( !(((tokenstate & 1) != 0 && matches("!"))) ) {
+                throw new FailedPredicateException(input, "ExclamationMark", "(tokenstate & 1) != 0 && matches(\"!\")");
             }
             match('!'); 
 
@@ -322,8 +322,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:32:6: ({...}? => 'FIXME' )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:32:8: {...}? => 'FIXME'
             {
-            if ( !(((tokenstate & 2) != 0 && matches("FIXME"))) ) {
-                throw new FailedPredicateException(input, "FIXME", "(tokenstate & 2) != 0 && matches(\"FIXME\")");
+            if ( !(((tokenstate & 1) != 0 && matches("FIXME"))) ) {
+                throw new FailedPredicateException(input, "FIXME", "(tokenstate & 1) != 0 && matches(\"FIXME\")");
             }
             match("FIXME"); 
 
@@ -346,8 +346,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:33:8: ({...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:33:10: {...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            if ( !(((tokenstate & 1) != 0)) ) {
-                throw new FailedPredicateException(input, "RULE_ID", "(tokenstate & 1) != 0");
+            if ( !(((tokenstate & 2) != 0)) ) {
+                throw new FailedPredicateException(input, "RULE_ID", "(tokenstate & 2) != 0");
             }
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:33:37: ( '^' )?
             int alt1=2;
@@ -428,8 +428,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:34:16: ({...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:34:18: {...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            if ( !(((tokenstate & 2) != 0)) ) {
-                throw new FailedPredicateException(input, "RULE_INVOCATION", "(tokenstate & 2) != 0");
+            if ( !(((tokenstate & 1) != 0)) ) {
+                throw new FailedPredicateException(input, "RULE_INVOCATION", "(tokenstate & 1) != 0");
             }
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:34:45: ( '^' )?
             int alt3=2;
@@ -511,8 +511,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:35:9: ({...}? => ( '0' .. '9' )+ )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:35:11: {...}? => ( '0' .. '9' )+
             {
-            if ( !(((tokenstate & 1) != 0)) ) {
-                throw new FailedPredicateException(input, "RULE_INT", "(tokenstate & 1) != 0");
+            if ( !(((tokenstate & 2) != 0)) ) {
+                throw new FailedPredicateException(input, "RULE_INT", "(tokenstate & 2) != 0");
             }
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:35:38: ( '0' .. '9' )+
             int cnt5=0;
@@ -563,8 +563,8 @@ public class XpectHI extends Lexer {
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:36:12: ({...}? => ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:36:14: {...}? => ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            if ( !(((tokenstate & 1) != 0)) ) {
-                throw new FailedPredicateException(input, "RULE_STRING", "(tokenstate & 1) != 0");
+            if ( !(((tokenstate & 2) != 0)) ) {
+                throw new FailedPredicateException(input, "RULE_STRING", "(tokenstate & 2) != 0");
             }
             // ../org.eclipse.xpect.ui/src-gen/org/eclipse/xpect/lexer/XpectHI.g:36:41: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
@@ -1279,7 +1279,7 @@ public class XpectHI extends Lexer {
                         int index14_25 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_25=='u') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("true"))))) {s = 46;}
+                        if ( (LA14_25=='u') && ((((tokenstate & 2) != 0 && matches("true"))||((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 46;}
 
                         else if ( ((LA14_25>='0' && LA14_25<='9')||(LA14_25>='A' && LA14_25<='Z')||LA14_25=='_'||(LA14_25>='a' && LA14_25<='t')||(LA14_25>='v' && LA14_25<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1296,7 +1296,7 @@ public class XpectHI extends Lexer {
                         int index14_46 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_46=='e') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("true"))))) {s = 53;}
+                        if ( (LA14_46=='e') && ((((tokenstate & 2) != 0 && matches("true"))||((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 53;}
 
                         else if ( ((LA14_46>='0' && LA14_46<='9')||(LA14_46>='A' && LA14_46<='Z')||LA14_46=='_'||(LA14_46>='a' && LA14_46<='d')||(LA14_46>='f' && LA14_46<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1313,11 +1313,11 @@ public class XpectHI extends Lexer {
                         int index14_58 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0 && matches("true"))) ) {s = 64;}
+                        if ( (((tokenstate & 2) != 0 && matches("true"))) ) {s = 64;}
 
-                        else if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        else if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                          
                         input.seek(index14_58);
@@ -1330,7 +1330,7 @@ public class XpectHI extends Lexer {
                         int index14_22 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0 && matches("="))) ) {s = 43;}
+                        if ( (((tokenstate & 2) != 0 && matches("="))) ) {s = 43;}
 
                         else if ( (true) ) {s = 18;}
 
@@ -1345,11 +1345,11 @@ public class XpectHI extends Lexer {
                         int index14_65 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0 && matches("false"))) ) {s = 71;}
+                        if ( (((tokenstate & 2) != 0 && matches("false"))) ) {s = 71;}
 
-                        else if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        else if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                          
                         input.seek(index14_65);
@@ -1362,7 +1362,7 @@ public class XpectHI extends Lexer {
                         int index14_23 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0 && matches("{"))) ) {s = 44;}
+                        if ( (((tokenstate & 2) != 0 && matches("{"))) ) {s = 44;}
 
                         else if ( (true) ) {s = 18;}
 
@@ -1377,7 +1377,7 @@ public class XpectHI extends Lexer {
                         int index14_24 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0 && matches("}"))) ) {s = 45;}
+                        if ( (((tokenstate & 2) != 0 && matches("}"))) ) {s = 45;}
 
                         else if ( (true) ) {s = 18;}
 
@@ -1392,11 +1392,11 @@ public class XpectHI extends Lexer {
                         int index14_82 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0 && matches("END_SETUP"))) ) {s = 85;}
+                        if ( (((tokenstate & 2) != 0 && matches("END_SETUP"))) ) {s = 85;}
 
-                        else if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        else if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                          
                         input.seek(index14_82);
@@ -1409,7 +1409,7 @@ public class XpectHI extends Lexer {
                         int index14_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( ((LA14_15>='\u0000' && LA14_15<='\uFFFF')) && (((tokenstate & 1) != 0))) {s = 34;}
+                        if ( ((LA14_15>='\u0000' && LA14_15<='\uFFFF')) && (((tokenstate & 2) != 0))) {s = 34;}
 
                         else s = 18;
 
@@ -1441,9 +1441,9 @@ public class XpectHI extends Lexer {
                         int index14_40 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                          
                         input.seek(index14_40);
@@ -1456,11 +1456,11 @@ public class XpectHI extends Lexer {
                         int index14_67 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 2) != 0 && matches("FIXME"))) ) {s = 73;}
+                        if ( (((tokenstate & 1) != 0 && matches("FIXME"))) ) {s = 73;}
 
-                        else if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        else if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                          
                         input.seek(index14_67);
@@ -1473,7 +1473,7 @@ public class XpectHI extends Lexer {
                         int index14_27 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0 && matches("."))) ) {s = 48;}
+                        if ( (((tokenstate & 2) != 0 && matches("."))) ) {s = 48;}
 
                         else if ( (true) ) {s = 18;}
 
@@ -1507,7 +1507,7 @@ public class XpectHI extends Lexer {
                         int index14_26 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_26=='l') && ((((tokenstate & 1) != 0 && matches("false"))||((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 47;}
+                        if ( (LA14_26=='l') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("false"))))) {s = 47;}
 
                         else if ( ((LA14_26>='0' && LA14_26<='9')||(LA14_26>='A' && LA14_26<='Z')||LA14_26=='_'||(LA14_26>='a' && LA14_26<='k')||(LA14_26>='m' && LA14_26<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1524,7 +1524,7 @@ public class XpectHI extends Lexer {
                         int index14_29 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 2) != 0 && matches("!"))) ) {s = 50;}
+                        if ( (((tokenstate & 1) != 0 && matches("!"))) ) {s = 50;}
 
                         else if ( (true) ) {s = 18;}
 
@@ -1539,7 +1539,7 @@ public class XpectHI extends Lexer {
                         int index14_47 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_47=='s') && ((((tokenstate & 1) != 0 && matches("false"))||((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 54;}
+                        if ( (LA14_47=='s') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("false"))))) {s = 54;}
 
                         else if ( ((LA14_47>='0' && LA14_47<='9')||(LA14_47>='A' && LA14_47<='Z')||LA14_47=='_'||(LA14_47>='a' && LA14_47<='r')||(LA14_47>='t' && LA14_47<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1556,7 +1556,7 @@ public class XpectHI extends Lexer {
                         int index14_54 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_54=='e') && ((((tokenstate & 1) != 0 && matches("false"))||((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 59;}
+                        if ( (LA14_54=='e') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("false"))))) {s = 59;}
 
                         else if ( ((LA14_54>='0' && LA14_54<='9')||(LA14_54>='A' && LA14_54<='Z')||LA14_54=='_'||(LA14_54>='a' && LA14_54<='d')||(LA14_54>='f' && LA14_54<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1573,7 +1573,7 @@ public class XpectHI extends Lexer {
                         int index14_32 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0)) ) {s = 33;}
+                        if ( (((tokenstate & 2) != 0)) ) {s = 33;}
 
                         else if ( (true) ) {s = 18;}
 
@@ -1588,9 +1588,9 @@ public class XpectHI extends Lexer {
                         int index14_20 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                         else if ( (true) ) {s = 18;}
 
@@ -1635,7 +1635,7 @@ public class XpectHI extends Lexer {
                         int index14_28 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_28=='D') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("END_SETUP"))))) {s = 49;}
+                        if ( (LA14_28=='D') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("END_SETUP"))))) {s = 49;}
 
                         else if ( ((LA14_28>='0' && LA14_28<='9')||(LA14_28>='A' && LA14_28<='C')||(LA14_28>='E' && LA14_28<='Z')||LA14_28=='_'||(LA14_28>='a' && LA14_28<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1667,7 +1667,7 @@ public class XpectHI extends Lexer {
                         int index14_49 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_49=='_') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("END_SETUP"))))) {s = 55;}
+                        if ( (LA14_49=='_') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("END_SETUP"))))) {s = 55;}
 
                         else if ( ((LA14_49>='0' && LA14_49<='9')||(LA14_49>='A' && LA14_49<='Z')||(LA14_49>='a' && LA14_49<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1684,7 +1684,7 @@ public class XpectHI extends Lexer {
                         int index14_55 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_55=='S') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("END_SETUP"))))) {s = 60;}
+                        if ( (LA14_55=='S') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("END_SETUP"))))) {s = 60;}
 
                         else if ( ((LA14_55>='0' && LA14_55<='9')||(LA14_55>='A' && LA14_55<='R')||(LA14_55>='T' && LA14_55<='Z')||LA14_55=='_'||(LA14_55>='a' && LA14_55<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1701,7 +1701,7 @@ public class XpectHI extends Lexer {
                         int index14_60 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_60=='E') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("END_SETUP"))))) {s = 66;}
+                        if ( (LA14_60=='E') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("END_SETUP"))))) {s = 66;}
 
                         else if ( ((LA14_60>='0' && LA14_60<='9')||(LA14_60>='A' && LA14_60<='D')||(LA14_60>='F' && LA14_60<='Z')||LA14_60=='_'||(LA14_60>='a' && LA14_60<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1718,7 +1718,7 @@ public class XpectHI extends Lexer {
                         int index14_66 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_66=='T') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("END_SETUP"))))) {s = 72;}
+                        if ( (LA14_66=='T') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("END_SETUP"))))) {s = 72;}
 
                         else if ( ((LA14_66>='0' && LA14_66<='9')||(LA14_66>='A' && LA14_66<='S')||(LA14_66>='U' && LA14_66<='Z')||LA14_66=='_'||(LA14_66>='a' && LA14_66<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1735,7 +1735,7 @@ public class XpectHI extends Lexer {
                         int index14_72 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_72=='U') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("END_SETUP"))))) {s = 76;}
+                        if ( (LA14_72=='U') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("END_SETUP"))))) {s = 76;}
 
                         else if ( ((LA14_72>='0' && LA14_72<='9')||(LA14_72>='A' && LA14_72<='T')||(LA14_72>='V' && LA14_72<='Z')||LA14_72=='_'||(LA14_72>='a' && LA14_72<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1769,7 +1769,7 @@ public class XpectHI extends Lexer {
                         int index14_76 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_76=='P') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("END_SETUP"))))) {s = 79;}
+                        if ( (LA14_76=='P') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("END_SETUP"))))) {s = 79;}
 
                         else if ( ((LA14_76>='0' && LA14_76<='9')||(LA14_76>='A' && LA14_76<='O')||(LA14_76>='Q' && LA14_76<='Z')||LA14_76=='_'||(LA14_76>='a' && LA14_76<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1801,7 +1801,7 @@ public class XpectHI extends Lexer {
                         int index14_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( ((LA14_13>='0' && LA14_13<='9')) && (((tokenstate & 1) != 0))) {s = 33;}
+                        if ( ((LA14_13>='0' && LA14_13<='9')) && (((tokenstate & 2) != 0))) {s = 33;}
 
                         else s = 32;
 
@@ -1816,7 +1816,7 @@ public class XpectHI extends Lexer {
                         int index14_30 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_30=='X') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("FIXME"))))) {s = 51;}
+                        if ( (LA14_30=='X') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("FIXME"))))) {s = 51;}
 
                         else if ( ((LA14_30>='0' && LA14_30<='9')||(LA14_30>='A' && LA14_30<='W')||(LA14_30>='Y' && LA14_30<='Z')||LA14_30=='_'||(LA14_30>='a' && LA14_30<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1833,7 +1833,7 @@ public class XpectHI extends Lexer {
                         int index14_51 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_51=='M') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("FIXME"))))) {s = 56;}
+                        if ( (LA14_51=='M') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("FIXME"))))) {s = 56;}
 
                         else if ( ((LA14_51>='0' && LA14_51<='9')||(LA14_51>='A' && LA14_51<='L')||(LA14_51>='N' && LA14_51<='Z')||LA14_51=='_'||(LA14_51>='a' && LA14_51<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1850,7 +1850,7 @@ public class XpectHI extends Lexer {
                         int index14_56 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_56=='E') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("FIXME"))))) {s = 61;}
+                        if ( (LA14_56=='E') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("FIXME"))))) {s = 61;}
 
                         else if ( ((LA14_56>='0' && LA14_56<='9')||(LA14_56>='A' && LA14_56<='D')||(LA14_56>='F' && LA14_56<='Z')||LA14_56=='_'||(LA14_56>='a' && LA14_56<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -1982,7 +1982,7 @@ public class XpectHI extends Lexer {
                         int index14_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_5=='r') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("true"))))) {s = 25;}
+                        if ( (LA14_5=='r') && ((((tokenstate & 2) != 0 && matches("true"))||((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 25;}
 
                         else if ( ((LA14_5>='0' && LA14_5<='9')||(LA14_5>='A' && LA14_5<='Z')||LA14_5=='_'||(LA14_5>='a' && LA14_5<='q')||(LA14_5>='s' && LA14_5<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -2133,7 +2133,7 @@ public class XpectHI extends Lexer {
                         int index14_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_6=='a') && ((((tokenstate & 1) != 0 && matches("false"))||((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 26;}
+                        if ( (LA14_6=='a') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("false"))))) {s = 26;}
 
                         else if ( ((LA14_6>='0' && LA14_6<='9')||(LA14_6>='A' && LA14_6<='Z')||LA14_6=='_'||(LA14_6>='b' && LA14_6<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -2254,7 +2254,7 @@ public class XpectHI extends Lexer {
                         int index14_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( ((LA14_14>='\u0000' && LA14_14<='\uFFFF')) && (((tokenstate & 1) != 0))) {s = 34;}
+                        if ( ((LA14_14>='\u0000' && LA14_14<='\uFFFF')) && (((tokenstate & 2) != 0))) {s = 34;}
 
                         else s = 18;
 
@@ -2284,7 +2284,7 @@ public class XpectHI extends Lexer {
                         int index14_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_8=='N') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("END_SETUP"))))) {s = 28;}
+                        if ( (LA14_8=='N') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("END_SETUP"))))) {s = 28;}
 
                         else if ( ((LA14_8>='0' && LA14_8<='9')||(LA14_8>='A' && LA14_8<='M')||(LA14_8>='O' && LA14_8<='Z')||LA14_8=='_'||(LA14_8>='a' && LA14_8<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 
@@ -2318,9 +2318,9 @@ public class XpectHI extends Lexer {
                         s = -1;
                         if ( (((tokenstate & 4) != 0 && matches("XPECT_IGNORE"))) ) {s = 90;}
 
-                        else if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        else if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                          
                         input.seek(index14_88);
@@ -2335,9 +2335,9 @@ public class XpectHI extends Lexer {
                         s = -1;
                         if ( (((tokenstate & 4) != 0 && matches("XPECT_SETUP"))) ) {s = 89;}
 
-                        else if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        else if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                          
                         input.seek(index14_87);
@@ -2352,9 +2352,9 @@ public class XpectHI extends Lexer {
                         s = -1;
                         if ( (((tokenstate & 4) != 0 && matches("XPECT"))) ) {s = 70;}
 
-                        else if ( (((tokenstate & 1) != 0)) ) {s = 41;}
+                        else if ( (((tokenstate & 2) != 0)) ) {s = 41;}
 
-                        else if ( (((tokenstate & 2) != 0)) ) {s = 42;}
+                        else if ( (((tokenstate & 1) != 0)) ) {s = 42;}
 
                          
                         input.seek(index14_63);
@@ -2367,7 +2367,7 @@ public class XpectHI extends Lexer {
                         int index14_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA14_10=='I') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 2) != 0 && matches("FIXME"))))) {s = 30;}
+                        if ( (LA14_10=='I') && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)||((tokenstate & 1) != 0 && matches("FIXME"))))) {s = 30;}
 
                         else if ( ((LA14_10>='0' && LA14_10<='9')||(LA14_10>='A' && LA14_10<='H')||(LA14_10>='J' && LA14_10<='Z')||LA14_10=='_'||(LA14_10>='a' && LA14_10<='z')) && ((((tokenstate & 1) != 0)||((tokenstate & 2) != 0)))) {s = 21;}
 

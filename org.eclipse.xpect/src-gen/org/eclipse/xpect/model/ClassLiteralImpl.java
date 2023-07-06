@@ -31,10 +31,10 @@ import org.eclipse.xtext.common.types.JvmDeclaredType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.ClassLiteralImpl#getType <em>Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -76,7 +76,6 @@ public class ClassLiteralImpl extends LiteralImpl implements ClassLiteral
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public JvmDeclaredType getType()
 	{
 		if (type != null && type.eIsProxy())
@@ -107,7 +106,6 @@ public class ClassLiteralImpl extends LiteralImpl implements ClassLiteral
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setType(JvmDeclaredType newType)
 	{
 		JvmDeclaredType oldType = type;

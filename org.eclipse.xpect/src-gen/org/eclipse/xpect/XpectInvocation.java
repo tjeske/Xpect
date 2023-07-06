@@ -24,7 +24,6 @@ import org.eclipse.xpect.parameter.IStatementRelatedRegion;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.XpectInvocation#getId <em>Id</em>}</li>
  *   <li>{@link org.eclipse.xpect.XpectInvocation#isIgnore <em>Ignore</em>}</li>
@@ -34,6 +33,7 @@ import org.eclipse.xpect.parameter.IStatementRelatedRegion;
  *   <li>{@link org.eclipse.xpect.XpectInvocation#getRelatedRegions <em>Related Regions</em>}</li>
  *   <li>{@link org.eclipse.xpect.XpectInvocation#getExtendedRegion <em>Extended Region</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.xpect.XpectPackage#getXpectInvocation()
  * @model
@@ -44,6 +44,10 @@ public interface XpectInvocation extends Member
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see org.eclipse.xpect.XpectPackage#getXpectInvocation_Id()
@@ -55,6 +59,10 @@ public interface XpectInvocation extends Member
 	/**
 	 * Returns the value of the '<em><b>Ignore</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ignore</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ignore</em>' attribute.
 	 * @see #setIgnore(boolean)
@@ -104,6 +112,10 @@ public interface XpectInvocation extends Member
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Method</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Method</em>' reference.
 	 * @see #setMethod(XjmXpectMethod)
@@ -127,6 +139,10 @@ public interface XpectInvocation extends Member
 	 * Returns the value of the '<em><b>Arguments</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.xpect.XpectArgument}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Arguments</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arguments</em>' containment reference list.
 	 * @see org.eclipse.xpect.XpectPackage#getXpectInvocation_Arguments()
@@ -139,6 +155,10 @@ public interface XpectInvocation extends Member
 	 * Returns the value of the '<em><b>Related Regions</b></em>' attribute list.
 	 * The list contents are of type {@link org.eclipse.xpect.parameter.IStatementRelatedRegion}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Related Regions</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Related Regions</em>' attribute list.
 	 * @see org.eclipse.xpect.XpectPackage#getXpectInvocation_RelatedRegions()
@@ -150,6 +170,10 @@ public interface XpectInvocation extends Member
 	/**
 	 * Returns the value of the '<em><b>Extended Region</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Extended Region</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extended Region</em>' attribute.
 	 * @see #setExtendedRegion(IStatementRelatedRegion)

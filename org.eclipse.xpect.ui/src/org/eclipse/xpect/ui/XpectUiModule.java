@@ -70,5 +70,14 @@ public class XpectUiModule extends org.eclipse.xpect.ui.AbstractXpectUiModule {
 	public Class<? extends LanguageRootPreferencePage> bindLanguageRootPreferencePage() {
 		return XpectRootPreferencePage.class;
 	}
+	
+	public void configureContentAssistLexer(com.google.inject.Binder binder) {
+		binder.bind(org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.CONTENT_ASSIST)).to(org.eclipse.xpect.lexer.XpectCA.class);
+	}
+	
+	public void configureHighlightingLexer(com.google.inject.Binder binder) {
+		binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.HIGHLIGHTING)).to(org.eclipse.xpect.lexer.XpectHI.class);
+	}
+
 
 }

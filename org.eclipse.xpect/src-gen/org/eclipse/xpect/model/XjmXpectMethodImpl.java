@@ -22,6 +22,8 @@ import org.eclipse.xpect.XpectJavaModelPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Xjm Xpect Method</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */
@@ -53,7 +55,6 @@ public class XjmXpectMethodImpl extends XjmMethodImplCustom implements XjmXpectM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getParameterCount()
 	{
 		// TODO: implement this method

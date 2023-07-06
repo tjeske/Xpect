@@ -31,11 +31,11 @@ import org.eclipse.xtext.common.types.JvmDeclaredType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XjmClassImpl#getJvmClass <em>Jvm Class</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XjmClassImpl#getJavaClass <em>Java Class</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -87,7 +87,6 @@ public abstract class XjmClassImpl extends XjmElementImplCustom implements XjmCl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public JvmDeclaredType getJvmClass()
 	{
 		if (jvmClass != null && jvmClass.eIsProxy())
@@ -118,7 +117,6 @@ public abstract class XjmClassImpl extends XjmElementImplCustom implements XjmCl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setJvmClass(JvmDeclaredType newJvmClass)
 	{
 		JvmDeclaredType oldJvmClass = jvmClass;
@@ -132,7 +130,6 @@ public abstract class XjmClassImpl extends XjmElementImplCustom implements XjmCl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Class<?> getJavaClass()
 	{
 		return javaClass;
@@ -143,7 +140,6 @@ public abstract class XjmClassImpl extends XjmElementImplCustom implements XjmCl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setJavaClass(Class<?> newJavaClass)
 	{
 		Class<?> oldJavaClass = javaClass;
@@ -239,7 +235,7 @@ public abstract class XjmClassImpl extends XjmElementImplCustom implements XjmCl
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (javaClass: ");
 		result.append(javaClass);
 		result.append(')');

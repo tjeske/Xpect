@@ -42,12 +42,12 @@ import org.eclipse.xtext.common.types.JvmDeclaredType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.ComponentImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.ComponentImpl#getAssignments <em>Assignments</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.ComponentImpl#getComponentClass <em>Component Class</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -109,7 +109,6 @@ public class ComponentImpl extends ValueImpl implements Component
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Literal> getParameters()
 	{
 		if (parameters == null)
@@ -124,7 +123,6 @@ public class ComponentImpl extends ValueImpl implements Component
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Assignment> getAssignments()
 	{
 		if (assignments == null)
@@ -139,7 +137,6 @@ public class ComponentImpl extends ValueImpl implements Component
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public JvmDeclaredType getComponentClass()
 	{
 		if (componentClass != null && componentClass.eIsProxy())
@@ -170,7 +167,6 @@ public class ComponentImpl extends ValueImpl implements Component
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setComponentClass(JvmDeclaredType newComponentClass)
 	{
 		JvmDeclaredType oldComponentClass = componentClass;
@@ -184,7 +180,6 @@ public class ComponentImpl extends ValueImpl implements Component
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Assignment getAssignment()
 	{
 		// TODO: implement this method

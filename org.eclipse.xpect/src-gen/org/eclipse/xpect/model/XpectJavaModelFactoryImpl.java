@@ -141,7 +141,6 @@ public class XpectJavaModelFactoryImpl extends EFactoryImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XpectJavaModel createXpectJavaModel()
 	{
 		XpectJavaModelImplCustom xpectJavaModel = new XpectJavaModelImplCustom();
@@ -153,7 +152,6 @@ public class XpectJavaModelFactoryImpl extends EFactoryImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XjmElement createXjmElement()
 	{
 		XjmElementImplCustom xjmElement = new XjmElementImplCustom();
@@ -165,7 +163,6 @@ public class XpectJavaModelFactoryImpl extends EFactoryImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XjmTest createXjmTest()
 	{
 		XjmTestImplCustom xjmTest = new XjmTestImplCustom();
@@ -177,7 +174,6 @@ public class XpectJavaModelFactoryImpl extends EFactoryImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XjmContribution createXjmContribution()
 	{
 		XjmContributionImplCustom xjmContribution = new XjmContributionImplCustom();
@@ -189,7 +185,6 @@ public class XpectJavaModelFactoryImpl extends EFactoryImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XjmTestMethod createXjmTestMethod()
 	{
 		XjmTestMethodImplCustom xjmTestMethod = new XjmTestMethodImplCustom();
@@ -201,7 +196,6 @@ public class XpectJavaModelFactoryImpl extends EFactoryImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XjmXpectMethod createXjmXpectMethod()
 	{
 		XjmXpectMethodImplCustom xjmXpectMethod = new XjmXpectMethodImplCustom();
@@ -286,7 +280,6 @@ public class XpectJavaModelFactoryImpl extends EFactoryImpl implements XpectJava
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XpectJavaModelPackage getXpectJavaModelPackage()
 	{
 		return (XpectJavaModelPackage)getEPackage();

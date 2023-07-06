@@ -22,10 +22,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.Member#getFile <em>File</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.xpect.XpectPackage#getMember()
  * @model
@@ -37,6 +37,10 @@ public interface Member extends EObject
 	 * Returns the value of the '<em><b>File</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link org.eclipse.xpect.XpectFile#getMembers <em>Members</em>}'.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>File</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>File</em>' container reference.
 	 * @see #setFile(XpectFile)

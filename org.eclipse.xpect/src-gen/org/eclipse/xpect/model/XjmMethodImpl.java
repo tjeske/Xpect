@@ -35,12 +35,12 @@ import org.eclipse.xtext.common.types.JvmOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XjmMethodImpl#getTest <em>Test</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XjmMethodImpl#getJvmMethod <em>Jvm Method</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XjmMethodImpl#getJavaMethod <em>Java Method</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -102,7 +102,6 @@ public abstract class XjmMethodImpl extends XjmElementImplCustom implements XjmM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XjmTest getTest()
 	{
 		if (eContainerFeatureID() != XpectJavaModelPackage.XJM_METHOD__TEST) return null;
@@ -114,7 +113,6 @@ public abstract class XjmMethodImpl extends XjmElementImplCustom implements XjmM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public JvmOperation getJvmMethod()
 	{
 		return jvmMethod;
@@ -125,7 +123,6 @@ public abstract class XjmMethodImpl extends XjmElementImplCustom implements XjmM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setJvmMethod(JvmOperation newJvmMethod)
 	{
 		JvmOperation oldJvmMethod = jvmMethod;
@@ -139,7 +136,6 @@ public abstract class XjmMethodImpl extends XjmElementImplCustom implements XjmM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Method getJavaMethod()
 	{
 		return javaMethod;
@@ -150,7 +146,6 @@ public abstract class XjmMethodImpl extends XjmElementImplCustom implements XjmM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName()
 	{
 		// TODO: implement this method
@@ -292,7 +287,7 @@ public abstract class XjmMethodImpl extends XjmElementImplCustom implements XjmM
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (javaMethod: ");
 		result.append(javaMethod);
 		result.append(')');

@@ -22,10 +22,10 @@ import org.eclipse.xtext.common.types.JvmDeclaredType;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.Component#getComponentClass <em>Component Class</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.xpect.XpectPackage#getComponent()
  * @model
@@ -36,6 +36,10 @@ public interface Component extends Value, AbstractComponent
 	/**
 	 * Returns the value of the '<em><b>Component Class</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Component Class</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component Class</em>' reference.
 	 * @see #setComponentClass(JvmDeclaredType)

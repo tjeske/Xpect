@@ -89,13 +89,11 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	}
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Assignment returns Assignment
 	 *
 	 * Constraint:
 	 *     ((declaredTarget=[JvmOperation|ID] value=Value) | value=ComponentLong)
-	 * </pre>
 	 */
 	protected void sequence_Assignment(ISerializationContext context, Assignment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -103,14 +101,12 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Value returns ClassLiteral
 	 *     ClassLiteral returns ClassLiteral
 	 *
 	 * Constraint:
 	 *     type=[JvmDeclaredType|QualifiedName]
-	 * </pre>
 	 */
 	protected void sequence_ClassLiteral(ISerializationContext context, ClassLiteral semanticObject) {
 		if (errorAcceptor != null) {
@@ -118,20 +114,18 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XpectPackage.Literals.CLASS_LITERAL__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getClassLiteralAccess().getTypeJvmDeclaredTypeQualifiedNameParserRuleCall_1_0_1(), semanticObject.eGet(XpectPackage.Literals.CLASS_LITERAL__TYPE, false));
+		feeder.accept(grammarAccess.getClassLiteralAccess().getTypeJvmDeclaredTypeQualifiedNameParserRuleCall_1_0_1(), semanticObject.getType());
 		feeder.finish();
 	}
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Value returns Component
 	 *     ComponentInline returns Component
 	 *
 	 * Constraint:
 	 *     ((componentClass=[JvmDeclaredType|QualifiedName] parameters+=Literal*)? assignments+=Assignment*)
-	 * </pre>
 	 */
 	protected void sequence_ComponentInline(ISerializationContext context, Component semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -139,13 +133,11 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     ComponentLong returns Component
 	 *
 	 * Constraint:
 	 *     (componentClass=[JvmDeclaredType|QualifiedName] parameters+=Literal* assignments+=Assignment*)
-	 * </pre>
 	 */
 	protected void sequence_ComponentLong(ISerializationContext context, Component semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -153,14 +145,12 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Member returns XpectInvocation
 	 *     Lexicalspace_Invocation returns XpectInvocation
 	 *
 	 * Constraint:
 	 *     (ignore?='!'? fixme?='FIXME'? method=[XjmXpectMethod|INVOCATION])
-	 * </pre>
 	 */
 	protected void sequence_Lexicalspace_Invocation(ISerializationContext context, XpectInvocation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -168,14 +158,12 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Member returns XpectTest
 	 *     Lexicalspace_Setup returns XpectTest
 	 *
 	 * Constraint:
 	 *     (declaredSuite=[JvmDeclaredType|QualifiedName]? assignments+=Assignment*)
-	 * </pre>
 	 */
 	protected void sequence_Lexicalspace_Setup(ISerializationContext context, XpectTest semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -183,14 +171,12 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Value returns BooleanLiteral
 	 *     Literal returns BooleanLiteral
 	 *
 	 * Constraint:
 	 *     value?='true'?
-	 * </pre>
 	 */
 	protected void sequence_Literal(ISerializationContext context, BooleanLiteral semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -198,14 +184,12 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Value returns IntLiteral
 	 *     Literal returns IntLiteral
 	 *
 	 * Constraint:
 	 *     value=INT
-	 * </pre>
 	 */
 	protected void sequence_Literal(ISerializationContext context, IntLiteral semanticObject) {
 		if (errorAcceptor != null) {
@@ -219,14 +203,12 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Value returns StringLiteral
 	 *     Literal returns StringLiteral
 	 *
 	 * Constraint:
 	 *     value=STRING
-	 * </pre>
 	 */
 	protected void sequence_Literal(ISerializationContext context, StringLiteral semanticObject) {
 		if (errorAcceptor != null) {
@@ -240,13 +222,11 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Text returns Text
 	 *
 	 * Constraint:
 	 *     text=AnyText
-	 * </pre>
 	 */
 	protected void sequence_Text(ISerializationContext context, Text semanticObject) {
 		if (errorAcceptor != null) {
@@ -260,13 +240,11 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     XpectFile returns XpectFile
 	 *
 	 * Constraint:
 	 *     ((members+=Text members+=Member)* members+=Text)?
-	 * </pre>
 	 */
 	protected void sequence_XpectFile(ISerializationContext context, XpectFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -274,14 +252,12 @@ public class XpectSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	
 	/**
-	 * <pre>
 	 * Contexts:
 	 *     Member returns XpectIgnore
 	 *     XpectIgnore returns XpectIgnore
 	 *
 	 * Constraint:
 	 *     {XpectIgnore}
-	 * </pre>
 	 */
 	protected void sequence_XpectIgnore(ISerializationContext context, XpectIgnore semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

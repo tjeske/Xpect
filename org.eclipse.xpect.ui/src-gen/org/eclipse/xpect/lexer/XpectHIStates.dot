@@ -2,11 +2,11 @@
 ## You can use the command 'dot -Tpdf this.dot > out.pdf' to render it.
 digraph G {
 lexerstate4 [shape=diamond,label="ANY_OTHER, XPECT_IGNORE"];
-lexerstate1 [label="WS, ML_COMMENT, SL_COMMENT, ID, =, {, }, true, false, INT, STRING, ."];
-lexerstate2 [label="WS, ML_COMMENT, SL_COMMENT, !, FIXME"];
-lexerstate4->lexerstate1 [label="XPECT_SETUP"];
-lexerstate4->lexerstate2 [label=XPECT];
-lexerstate1->lexerstate4 [label="END_SETUP"];
-lexerstate2->lexerstate4 [label=INVOCATION];
+lexerstate2 [label="WS, ML_COMMENT, SL_COMMENT, ID, =, {, }, true, false, INT, STRING, ."];
+lexerstate1 [label="WS, ML_COMMENT, SL_COMMENT, !, FIXME"];
+lexerstate4->lexerstate2 [label="XPECT_SETUP"];
+lexerstate4->lexerstate1 [label=XPECT];
+lexerstate2->lexerstate4 [label="END_SETUP"];
+lexerstate1->lexerstate4 [label=INVOCATION];
 }
 

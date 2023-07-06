@@ -13,6 +13,8 @@
  */
 package org.eclipse.xpect.model;
 
+import java.lang.Iterable;
+
 import java.lang.annotation.Annotation;
 
 import java.util.Collection;
@@ -47,13 +49,13 @@ import org.eclipse.xpect.XpectJavaModelPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XpectJavaModelImpl#getTestOrSuite <em>Test Or Suite</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XpectJavaModelImpl#getContributions <em>Contributions</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XpectJavaModelImpl#getTests <em>Tests</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XpectJavaModelImpl#getMethods <em>Methods</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -125,7 +127,6 @@ public class XpectJavaModelImpl extends EObjectImpl implements XpectJavaModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XjmTest getTestOrSuite()
 	{
 		return testOrSuite;
@@ -136,7 +137,6 @@ public class XpectJavaModelImpl extends EObjectImpl implements XpectJavaModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setTestOrSuite(XjmTest newTestOrSuite)
 	{
 		XjmTest oldTestOrSuite = testOrSuite;
@@ -150,7 +150,6 @@ public class XpectJavaModelImpl extends EObjectImpl implements XpectJavaModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<XjmContribution> getContributions()
 	{
 		if (contributions == null)
@@ -165,7 +164,6 @@ public class XpectJavaModelImpl extends EObjectImpl implements XpectJavaModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<XjmTest> getTests()
 	{
 		if (tests == null)
@@ -180,7 +178,6 @@ public class XpectJavaModelImpl extends EObjectImpl implements XpectJavaModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EMap<String, XjmMethod> getMethods()
 	{
 		if (methods == null)
@@ -195,7 +192,6 @@ public class XpectJavaModelImpl extends EObjectImpl implements XpectJavaModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Iterable<XjmContribution> getContributions(Class<? extends Annotation> role)
 	{
 		// TODO: implement this method
@@ -208,7 +204,6 @@ public class XpectJavaModelImpl extends EObjectImpl implements XpectJavaModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Iterable<XjmContribution> getContributions(Class<? extends Annotation> role, Environment environment)
 	{
 		// TODO: implement this method

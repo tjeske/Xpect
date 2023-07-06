@@ -35,11 +35,11 @@ import org.eclipse.xtext.common.types.JvmOperation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.AssignmentImpl#getDeclaredTarget <em>Declared Target</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.AssignmentImpl#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -91,7 +91,6 @@ public class AssignmentImpl extends EObjectImpl implements Assignment
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public JvmOperation getDeclaredTarget()
 	{
 		if (declaredTarget != null && declaredTarget.eIsProxy())
@@ -122,7 +121,6 @@ public class AssignmentImpl extends EObjectImpl implements Assignment
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDeclaredTarget(JvmOperation newDeclaredTarget)
 	{
 		JvmOperation oldDeclaredTarget = declaredTarget;
@@ -136,7 +134,6 @@ public class AssignmentImpl extends EObjectImpl implements Assignment
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Value getValue()
 	{
 		return value;
@@ -164,7 +161,6 @@ public class AssignmentImpl extends EObjectImpl implements Assignment
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setValue(Value newValue)
 	{
 		if (newValue != value)
@@ -186,7 +182,6 @@ public class AssignmentImpl extends EObjectImpl implements Assignment
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public AbstractComponent getInstance()
 	{
 		// TODO: implement this method

@@ -28,10 +28,10 @@ import org.eclipse.xpect.XpectPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.IntLiteralImpl#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -83,7 +83,6 @@ public class IntLiteralImpl extends LiteralImpl implements IntLiteral
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getValue()
 	{
 		return value;
@@ -94,7 +93,6 @@ public class IntLiteralImpl extends LiteralImpl implements IntLiteral
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setValue(int newValue)
 	{
 		int oldValue = value;
@@ -179,7 +177,7 @@ public class IntLiteralImpl extends LiteralImpl implements IntLiteral
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(')');

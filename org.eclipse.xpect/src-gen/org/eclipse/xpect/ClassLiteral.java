@@ -22,10 +22,10 @@ import org.eclipse.xtext.common.types.JvmDeclaredType;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.ClassLiteral#getType <em>Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.xpect.XpectPackage#getClassLiteral()
  * @model
@@ -36,6 +36,10 @@ public interface ClassLiteral extends Literal
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(JvmDeclaredType)

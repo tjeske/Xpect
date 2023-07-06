@@ -13,6 +13,8 @@
  */
 package org.eclipse.xpect.model;
 
+import java.lang.Iterable;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -42,10 +44,10 @@ import org.eclipse.xpect.setup.ISetupInitializer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XpectFileImpl#getMembers <em>Members</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -87,7 +89,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Member> getMembers()
 	{
 		if (members == null)
@@ -102,7 +103,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean isIgnore()
 	{
 		// TODO: implement this method
@@ -115,7 +115,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XpectTest getTest()
 	{
 		// TODO: implement this method
@@ -128,7 +127,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Iterable<XpectInvocation> getInvocations()
 	{
 		// TODO: implement this method
@@ -141,7 +139,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XpectInvocation getInvocation(String id)
 	{
 		// TODO: implement this method
@@ -154,7 +151,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XpectInvocation getInvocationAt(int offset)
 	{
 		// TODO: implement this method
@@ -167,7 +163,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDocument()
 	{
 		// TODO: implement this method
@@ -180,7 +175,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XpectJavaModel getJavaModel()
 	{
 		// TODO: implement this method
@@ -193,7 +187,6 @@ public class XpectFileImpl extends EObjectImpl implements XpectFile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public <T> ISetupInitializer<T> createSetupInitializer()
 	{
 		// TODO: implement this method

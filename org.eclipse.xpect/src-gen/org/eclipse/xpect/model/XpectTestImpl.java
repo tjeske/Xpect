@@ -42,12 +42,12 @@ import org.eclipse.xtext.common.types.JvmDeclaredType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XpectTestImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XpectTestImpl#getAssignments <em>Assignments</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XpectTestImpl#getDeclaredSuite <em>Declared Suite</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -109,7 +109,6 @@ public class XpectTestImpl extends MemberImpl implements XpectTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Literal> getParameters()
 	{
 		if (parameters == null)
@@ -124,7 +123,6 @@ public class XpectTestImpl extends MemberImpl implements XpectTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Assignment> getAssignments()
 	{
 		if (assignments == null)
@@ -139,7 +137,6 @@ public class XpectTestImpl extends MemberImpl implements XpectTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public JvmDeclaredType getDeclaredSuite()
 	{
 		if (declaredSuite != null && declaredSuite.eIsProxy())
@@ -170,7 +167,6 @@ public class XpectTestImpl extends MemberImpl implements XpectTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDeclaredSuite(JvmDeclaredType newDeclaredSuite)
 	{
 		JvmDeclaredType oldDeclaredSuite = declaredSuite;

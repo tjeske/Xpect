@@ -203,6 +203,7 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	{
 		super(eNS_URI, XpectFactory.eINSTANCE);
 	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,7 +213,7 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 *
+	 * 
 	 * <p>This method is used to initialize {@link XpectPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -227,8 +228,7 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 		if (isInited) return (XpectPackage)EPackage.Registry.INSTANCE.getEPackage(XpectPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredXpectPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		XpectPackageImpl theXpectPackage = registeredXpectPackage instanceof XpectPackageImpl ? (XpectPackageImpl)registeredXpectPackage : new XpectPackageImpl();
+		XpectPackageImpl theXpectPackage = (XpectPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof XpectPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new XpectPackageImpl());
 
 		isInited = true;
 
@@ -236,8 +236,7 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 		TypesPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(XpectJavaModelPackage.eNS_URI);
-		XpectJavaModelPackageImpl theXpectJavaModelPackage = (XpectJavaModelPackageImpl)(registeredPackage instanceof XpectJavaModelPackageImpl ? registeredPackage : XpectJavaModelPackage.eINSTANCE);
+		XpectJavaModelPackageImpl theXpectJavaModelPackage = (XpectJavaModelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(XpectJavaModelPackage.eNS_URI) instanceof XpectJavaModelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(XpectJavaModelPackage.eNS_URI) : XpectJavaModelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theXpectPackage.createPackageContents();
@@ -250,6 +249,7 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 		// Mark meta-data to indicate it can't be changed
 		theXpectPackage.freeze();
 
+  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(XpectPackage.eNS_URI, theXpectPackage);
 		return theXpectPackage;
@@ -260,7 +260,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getXpectFile()
 	{
 		return xpectFileEClass;
@@ -271,7 +270,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getXpectFile_Members()
 	{
 		return (EReference)xpectFileEClass.getEStructuralFeatures().get(0);
@@ -282,7 +280,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getXpectTest()
 	{
 		return xpectTestEClass;
@@ -293,7 +290,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getXpectTest_DeclaredSuite()
 	{
 		return (EReference)xpectTestEClass.getEStructuralFeatures().get(0);
@@ -304,7 +300,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getXpectIgnore()
 	{
 		return xpectIgnoreEClass;
@@ -315,7 +310,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getXpectInvocation()
 	{
 		return xpectInvocationEClass;
@@ -326,7 +320,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getXpectInvocation_Id()
 	{
 		return (EAttribute)xpectInvocationEClass.getEStructuralFeatures().get(0);
@@ -337,7 +330,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getXpectInvocation_Ignore()
 	{
 		return (EAttribute)xpectInvocationEClass.getEStructuralFeatures().get(1);
@@ -348,7 +340,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getXpectInvocation_Fixme()
 	{
 		return (EAttribute)xpectInvocationEClass.getEStructuralFeatures().get(2);
@@ -359,7 +350,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getXpectInvocation_Method()
 	{
 		return (EReference)xpectInvocationEClass.getEStructuralFeatures().get(3);
@@ -370,7 +360,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getXpectInvocation_Arguments()
 	{
 		return (EReference)xpectInvocationEClass.getEStructuralFeatures().get(4);
@@ -381,7 +370,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getXpectInvocation_RelatedRegions()
 	{
 		return (EAttribute)xpectInvocationEClass.getEStructuralFeatures().get(5);
@@ -392,7 +380,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getXpectInvocation_ExtendedRegion()
 	{
 		return (EAttribute)xpectInvocationEClass.getEStructuralFeatures().get(6);
@@ -403,7 +390,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getXpectArgument()
 	{
 		return xpectArgumentEClass;
@@ -414,7 +400,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getXpectArgument_Index()
 	{
 		return (EAttribute)xpectArgumentEClass.getEStructuralFeatures().get(0);
@@ -425,7 +410,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getMember()
 	{
 		return memberEClass;
@@ -436,7 +420,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getMember_File()
 	{
 		return (EReference)memberEClass.getEStructuralFeatures().get(0);
@@ -447,7 +430,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getText()
 	{
 		return textEClass;
@@ -458,7 +440,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getText_Text()
 	{
 		return (EAttribute)textEClass.getEStructuralFeatures().get(0);
@@ -469,7 +450,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getAbstractComponent()
 	{
 		return abstractComponentEClass;
@@ -480,7 +460,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getAbstractComponent_Parameters()
 	{
 		return (EReference)abstractComponentEClass.getEStructuralFeatures().get(0);
@@ -491,7 +470,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getAbstractComponent_Assignments()
 	{
 		return (EReference)abstractComponentEClass.getEStructuralFeatures().get(1);
@@ -502,7 +480,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getAssignment()
 	{
 		return assignmentEClass;
@@ -513,7 +490,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getAssignment_DeclaredTarget()
 	{
 		return (EReference)assignmentEClass.getEStructuralFeatures().get(0);
@@ -524,7 +500,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getAssignment_Value()
 	{
 		return (EReference)assignmentEClass.getEStructuralFeatures().get(1);
@@ -535,7 +510,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getValue()
 	{
 		return valueEClass;
@@ -546,7 +520,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getComponent()
 	{
 		return componentEClass;
@@ -557,7 +530,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getComponent_ComponentClass()
 	{
 		return (EReference)componentEClass.getEStructuralFeatures().get(0);
@@ -568,7 +540,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getLiteral()
 	{
 		return literalEClass;
@@ -579,7 +550,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getClassLiteral()
 	{
 		return classLiteralEClass;
@@ -590,7 +560,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getClassLiteral_Type()
 	{
 		return (EReference)classLiteralEClass.getEStructuralFeatures().get(0);
@@ -601,7 +570,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getBooleanLiteral()
 	{
 		return booleanLiteralEClass;
@@ -612,7 +580,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getBooleanLiteral_Value()
 	{
 		return (EAttribute)booleanLiteralEClass.getEStructuralFeatures().get(0);
@@ -623,7 +590,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getIntLiteral()
 	{
 		return intLiteralEClass;
@@ -634,7 +600,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getIntLiteral_Value()
 	{
 		return (EAttribute)intLiteralEClass.getEStructuralFeatures().get(0);
@@ -645,7 +610,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getStringLiteral()
 	{
 		return stringLiteralEClass;
@@ -656,7 +620,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getStringLiteral_Value()
 	{
 		return (EAttribute)stringLiteralEClass.getEStructuralFeatures().get(0);
@@ -667,7 +630,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EDataType getStatementRelatedRegion()
 	{
 		return statementRelatedRegionEDataType;
@@ -678,7 +640,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EDataType getISetupInitializer()
 	{
 		return iSetupInitializerEDataType;
@@ -689,7 +650,6 @@ public class XpectPackageImpl extends EPackageImpl implements XpectPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XpectFactory getXpectFactory()
 	{
 		return (XpectFactory)getEFactoryInstance();

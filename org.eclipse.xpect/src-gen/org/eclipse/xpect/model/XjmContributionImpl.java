@@ -38,13 +38,13 @@ import org.eclipse.xpect.XpectJavaModelPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XjmContributionImpl#getRoles <em>Roles</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XjmContributionImpl#getEnvironments <em>Environments</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XjmContributionImpl#getDeactivationReason <em>Deactivation Reason</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XjmContributionImpl#getReplacedBy <em>Replaced By</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -126,7 +126,6 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Annotation> getRoles()
 	{
 		if (roles == null)
@@ -141,7 +140,6 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Environment> getEnvironments()
 	{
 		if (environments == null)
@@ -156,7 +154,6 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDeactivationReason()
 	{
 		return deactivationReason;
@@ -167,7 +164,6 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDeactivationReason(String newDeactivationReason)
 	{
 		String oldDeactivationReason = deactivationReason;
@@ -181,7 +177,6 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public XjmContribution getReplacedBy()
 	{
 		if (replacedBy != null && replacedBy.eIsProxy())
@@ -212,7 +207,6 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setReplacedBy(XjmContribution newReplacedBy)
 	{
 		XjmContribution oldReplacedBy = replacedBy;
@@ -226,7 +220,6 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean isActive()
 	{
 		// TODO: implement this method
@@ -239,7 +232,6 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public <T> T newInstance(Class<T> expectedType)
 	{
 		// TODO: implement this method
@@ -357,7 +349,7 @@ public class XjmContributionImpl extends XjmClassImplCustom implements XjmContri
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (roles: ");
 		result.append(roles);
 		result.append(", environments: ");

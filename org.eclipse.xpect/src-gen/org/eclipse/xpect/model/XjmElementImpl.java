@@ -33,10 +33,10 @@ import org.eclipse.xpect.XpectJavaModelPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XjmElementImpl#getImports <em>Imports</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -78,7 +78,6 @@ public class XjmElementImpl extends EObjectImpl implements XjmElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<XjmClass> getImports()
 	{
 		if (imports == null)

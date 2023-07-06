@@ -24,13 +24,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.XjmContribution#getRoles <em>Roles</em>}</li>
  *   <li>{@link org.eclipse.xpect.XjmContribution#getEnvironments <em>Environments</em>}</li>
  *   <li>{@link org.eclipse.xpect.XjmContribution#getDeactivationReason <em>Deactivation Reason</em>}</li>
  *   <li>{@link org.eclipse.xpect.XjmContribution#getReplacedBy <em>Replaced By</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.xpect.XpectJavaModelPackage#getXjmContribution()
  * @model
@@ -42,6 +42,10 @@ public interface XjmContribution extends XjmClass
 	 * Returns the value of the '<em><b>Roles</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.annotation.Annotation}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Roles</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Roles</em>' attribute list.
 	 * @see org.eclipse.xpect.XpectJavaModelPackage#getXjmContribution_Roles()
@@ -55,6 +59,10 @@ public interface XjmContribution extends XjmClass
 	 * The list contents are of type {@link org.eclipse.xpect.Environment}.
 	 * The literals are from the enumeration {@link org.eclipse.xpect.Environment}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Environments</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environments</em>' attribute list.
 	 * @see org.eclipse.xpect.Environment
@@ -67,6 +75,10 @@ public interface XjmContribution extends XjmClass
 	/**
 	 * Returns the value of the '<em><b>Deactivation Reason</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Deactivation Reason</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Deactivation Reason</em>' attribute.
 	 * @see #setDeactivationReason(String)
@@ -89,6 +101,10 @@ public interface XjmContribution extends XjmClass
 	/**
 	 * Returns the value of the '<em><b>Replaced By</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Replaced By</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Replaced By</em>' reference.
 	 * @see #setReplacedBy(XjmContribution)

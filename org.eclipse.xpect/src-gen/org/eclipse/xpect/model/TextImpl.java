@@ -28,10 +28,10 @@ import org.eclipse.xpect.XpectPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.TextImpl#getText <em>Text</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -83,7 +83,6 @@ public class TextImpl extends MemberImpl implements Text
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getText()
 	{
 		return text;
@@ -94,7 +93,6 @@ public class TextImpl extends MemberImpl implements Text
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setText(String newText)
 	{
 		String oldText = text;
@@ -179,7 +177,7 @@ public class TextImpl extends MemberImpl implements Text
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (text: ");
 		result.append(text);
 		result.append(')');

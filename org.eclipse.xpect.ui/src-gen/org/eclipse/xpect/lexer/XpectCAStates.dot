@@ -1,12 +1,12 @@
 ## This is a Graphviz .dot file (http://www.graphviz.org/)
 ## You can use the command 'dot -Tpdf this.dot > out.pdf' to render it.
 digraph G {
-lexerstate1 [shape=diamond,label="ANY_OTHER, XPECT_IGNORE"];
-lexerstate4 [label="WS, ML_COMMENT, SL_COMMENT, ID, =, {, }, true, false, INT, STRING, ."];
-lexerstate2 [label="WS, ML_COMMENT, SL_COMMENT, !, FIXME"];
-lexerstate1->lexerstate4 [label="XPECT_SETUP"];
-lexerstate1->lexerstate2 [label=XPECT];
-lexerstate4->lexerstate1 [label="END_SETUP"];
-lexerstate2->lexerstate1 [label=INVOCATION];
+lexerstate2 [shape=diamond,label="ANY_OTHER, XPECT_IGNORE"];
+lexerstate1 [label="WS, ML_COMMENT, SL_COMMENT, ID, =, {, }, true, false, INT, STRING, ."];
+lexerstate4 [label="WS, ML_COMMENT, SL_COMMENT, !, FIXME"];
+lexerstate2->lexerstate1 [label="XPECT_SETUP"];
+lexerstate2->lexerstate4 [label=XPECT];
+lexerstate1->lexerstate2 [label="END_SETUP"];
+lexerstate4->lexerstate2 [label=INVOCATION];
 }
 
