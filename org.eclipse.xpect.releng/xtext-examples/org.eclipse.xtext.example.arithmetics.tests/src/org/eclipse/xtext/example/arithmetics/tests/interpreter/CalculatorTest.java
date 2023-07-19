@@ -25,7 +25,7 @@ import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 
 @RunWith(XtextRunner.class)
-@InjectWith(PatchedArithmeticsInjectorProvider.class)
+@InjectWith(ArithmeticsInjectorProvider.class)
 public class CalculatorTest {
   @Inject
   private ParseHelper<org.eclipse.xtext.example.arithmetics.arithmetics.Module> parseHelper;
