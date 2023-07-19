@@ -57,21 +57,9 @@ public class XpectRuntimeModule extends AbstractXpectRuntimeModule {
 		binder.bind(IResourceDescriptions.class).annotatedWith(Names.named(ResourceDescriptionsProvider.NAMED_BUILDER_SCOPE)).to(NullResourceDescriptions.class);
 	}
 	
-	public void configureRuntimeLexer(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.parser.antlr.LexerBindings.RUNTIME)).to(org.eclipse.xpect.lexer.XpectRT.class);
-	}
-	
 	@SingletonBinding(eager=true)
 	public Class<? extends XpectValidator> bindXpectValidator() {
 		return XpectJavaValidator.class;
-	}
-	
-	public Class<? extends IJvmTypeProvider.Factory> bindIJvmTypeProvider$Factory() {
-		return ClasspathTypeProviderFactory.class;
-	}
-	
-	public TypesFactory bindTypesFactoryToInstance() {
-		return TypesFactory.eINSTANCE;
 	}
 
 }

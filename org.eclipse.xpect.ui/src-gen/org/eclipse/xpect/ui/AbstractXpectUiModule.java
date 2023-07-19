@@ -27,6 +27,7 @@ import org.eclipse.xtext.builder.clustering.CurrentDescriptions;
 import org.eclipse.xtext.builder.impl.PersistentDataAwareDirtyResource;
 import org.eclipse.xtext.builder.nature.NatureAddingEditorCallback;
 import org.eclipse.xtext.builder.preferences.BuilderPreferenceAccess;
+import org.eclipse.xtext.common.types.ui.DefaultCommonTypesUiModule;
 import org.eclipse.xtext.generator.IContextualOutputConfigurationProvider;
 import org.eclipse.xtext.ide.LexerIdeBindings;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.IContentAssistParser;
@@ -38,7 +39,6 @@ import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.resource.containers.IAllContainersState;
 import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
 import org.eclipse.xtext.service.SingletonBinding;
-import org.eclipse.xtext.ui.DefaultUiModule;
 import org.eclipse.xtext.ui.UIBindings;
 import org.eclipse.xtext.ui.codetemplates.ui.AccessibleCodetemplatesActivator;
 import org.eclipse.xtext.ui.codetemplates.ui.partialEditing.IPartialEditingContentAssistContextFactory;
@@ -80,7 +80,7 @@ import org.eclipse.xtext.ui.shared.Access;
  * Manual modifications go to {@link XpectUiModule}.
  */
 @SuppressWarnings("all")
-public abstract class AbstractXpectUiModule extends DefaultUiModule {
+public abstract class AbstractXpectUiModule extends DefaultCommonTypesUiModule {
 
 	public AbstractXpectUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
@@ -116,11 +116,6 @@ public abstract class AbstractXpectUiModule extends DefaultUiModule {
 	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
 	public void configureContentAssistLexerProvider(Binder binder) {
 		binder.bind(InternalXpectLexer.class).toProvider(LexerProvider.create(InternalXpectLexer.class));
-	}
-	
-	// contributed by org.eclipse.xtext.xtext.generator.exporting.QualifiedNamesFragment2
-	public Class<? extends PrefixMatcher> bindPrefixMatcher() {
-		return FQNPrefixMatcher.class;
 	}
 	
 	// contributed by org.eclipse.xtext.xtext.generator.exporting.QualifiedNamesFragment2
@@ -225,6 +220,11 @@ public abstract class AbstractXpectUiModule extends DefaultUiModule {
 	// contributed by org.eclipse.xtext.xtext.generator.ui.refactoring.RefactorElementNameFragment2
 	public Class<? extends IRenameSupport.Factory> bindIRenameSupport$Factory() {
 		return DefaultRenameSupport.Factory.class;
+	}
+	
+	// contributed by org.eclipse.xtext.xtext.generator.types.TypesGeneratorFragment2
+	public Class<? extends PrefixMatcher> bindPrefixMatcher() {
+		return FQNPrefixMatcher.class;
 	}
 	
 	// contributed by org.eclipse.xtext.xtext.generator.ui.templates.CodetemplatesGeneratorFragment2

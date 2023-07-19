@@ -58,6 +58,10 @@ Workflow {
 				}
 			}
 			
+			commonTypesSupport = {
+				onlyEnabledIfGrammarIsUsed = false
+			}
+			
 			fragment = org.eclipse.xtext.generator.adapter.FragmentAdapter {
 			fragment = de.itemis.statefullexer.StatefulLexerFragment {
 				runtime = true
