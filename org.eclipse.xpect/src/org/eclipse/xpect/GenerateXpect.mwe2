@@ -44,23 +44,46 @@ Workflow {
 			validator = {
 			}
 			generator = {
+				generateStub = false
 				generateXtendStub = true
 			}
 			junitSupport = {
 				generateStub = false
 			}
 			
-			fragment = ExternalAntlrLexerFragment {
+			parserGenerator = {
+				combinedGrammar = false
+				options = {
+					
+				}
+			}
+			
+			fragment = org.eclipse.xtext.generator.adapter.FragmentAdapter {
+			fragment = de.itemis.statefullexer.StatefulLexerFragment {
 				runtime = true
-				lexerGrammar = 
+				lexerBaseClass = "org.eclipse.xpect.services.Lexer"
+				antlrParam = "-lib"
+				antlrParam = "${runtimeProject}/src-gen/org/eclipse/xpect/parser/antlr/lexer"
 			}
 			
-			fragment = ExternalAntlrLexerFragment {
-				contentAssist = true
 			}
-			
-			fragment = ExternalAntlrLexerFragment {
+			fragment = org.eclipse.xtext.generator.adapter.FragmentAdapter {
+			fragment = de.itemis.statefullexer.StatefulLexerFragment {
+				lexerBaseClass = "org.eclipse.xpect.services.Lexer"
 				highlighting = true
+				antlrParam = "-lib"
+				antlrParam = "${runtimeProject}.ide/src-gen/org/eclipse/xpect/ide/contentassist/antlr/lexer"
+			}
+			
+			}
+			fragment = org.eclipse.xtext.generator.adapter.FragmentAdapter {
+			fragment = de.itemis.statefullexer.StatefulLexerFragment {
+				lexerBaseClass = "org.eclipse.xpect.ide.services.Lexer"
+				contentAssist = true
+				antlrParam = "-lib"
+				antlrParam = "${runtimeProject}.ide/src-gen/org/eclipse/xpect/ide/contentassist/antlr/lexer"
+			}
+			
 			}
 		}
 	}

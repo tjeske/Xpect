@@ -50,7 +50,6 @@ public class XpectUiModule extends org.eclipse.xpect.ui.AbstractXpectUiModule {
 		return XpectTokenToAttributeMapper.class;
 	}
 
-	@Override
 	public Class<? extends AbstractTypeScopeProvider> bindAbstractTypeScopeProvider() {
 		return ClasspathOrJdtBasedTypeScopeProvider.class;
 	}
@@ -72,7 +71,7 @@ public class XpectUiModule extends org.eclipse.xpect.ui.AbstractXpectUiModule {
 	}
 	
 	public void configureContentAssistLexer(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.CONTENT_ASSIST)).to(org.eclipse.xpect.lexer.XpectCA.class);
+		binder.bind(org.eclipse.xtext.ide.editor.contentassist.antlr.internal.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.CONTENT_ASSIST)).to(org.eclipse.xpect.lexer.XpectCA.class);
 	}
 	
 	public void configureHighlightingLexer(com.google.inject.Binder binder) {

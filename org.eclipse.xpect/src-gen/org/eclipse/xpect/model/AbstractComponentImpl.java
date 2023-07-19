@@ -38,11 +38,11 @@ import org.eclipse.xpect.XpectPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.AbstractComponentImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.AbstractComponentImpl#getAssignments <em>Assignments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,6 +94,7 @@ public abstract class AbstractComponentImpl extends EObjectImpl implements Abstr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Literal> getParameters()
 	{
 		if (parameters == null)
@@ -108,6 +109,7 @@ public abstract class AbstractComponentImpl extends EObjectImpl implements Abstr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Assignment> getAssignments()
 	{
 		if (assignments == null)

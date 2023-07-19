@@ -13,8 +13,6 @@
  */
 package org.eclipse.xpect;
 
-import java.lang.Iterable;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -28,10 +26,10 @@ import org.eclipse.xpect.setup.ISetupInitializer;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.XpectFile#getMembers <em>Members</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.xpect.XpectPackage#getXpectFile()
  * @model
@@ -44,10 +42,6 @@ public interface XpectFile extends EObject
 	 * The list contents are of type {@link org.eclipse.xpect.Member}.
 	 * It is bidirectional and its opposite is '{@link org.eclipse.xpect.Member#getFile <em>File</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Members</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Members</em>' containment reference list.
 	 * @see org.eclipse.xpect.XpectPackage#getXpectFile_Members()
@@ -76,7 +70,7 @@ public interface XpectFile extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.xtext.common.types.Iterable<org.eclipse.xpect.XpectInvocation>"
+	 * @model kind="operation" dataType="org.eclipse.xtext.common.types.Iterable&lt;org.eclipse.xpect.XpectInvocation&gt;"
 	 * @generated
 	 */
 	Iterable<XpectInvocation> getInvocations();
@@ -116,7 +110,7 @@ public interface XpectFile extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.xpect.ISetupInitializer<T>"
+	 * @model dataType="org.eclipse.xpect.ISetupInitializer&lt;T&gt;"
 	 * @generated
 	 */
 	<T> ISetupInitializer<T> createSetupInitializer();

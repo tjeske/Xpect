@@ -32,10 +32,10 @@ import org.eclipse.xpect.XpectPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XpectArgumentImpl#getIndex <em>Index</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class XpectArgumentImpl extends EObjectImpl implements XpectArgument
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getIndex()
 	{
 		return index;
@@ -97,6 +98,7 @@ public class XpectArgumentImpl extends EObjectImpl implements XpectArgument
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIndex(int newIndex)
 	{
 		int oldIndex = index;
@@ -110,6 +112,7 @@ public class XpectArgumentImpl extends EObjectImpl implements XpectArgument
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Class<?> getJavaType()
 	{
 		// TODO: implement this method
@@ -122,6 +125,7 @@ public class XpectArgumentImpl extends EObjectImpl implements XpectArgument
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectInvocation getStatement()
 	{
 		// TODO: implement this method
@@ -134,6 +138,7 @@ public class XpectArgumentImpl extends EObjectImpl implements XpectArgument
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public <T extends Annotation> T getAnnotationOrDefault(Class<T> annotationType)
 	{
 		// TODO: implement this method
@@ -146,6 +151,7 @@ public class XpectArgumentImpl extends EObjectImpl implements XpectArgument
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String toString(boolean showClass, boolean showMethod)
 	{
 		// TODO: implement this method
@@ -158,6 +164,7 @@ public class XpectArgumentImpl extends EObjectImpl implements XpectArgument
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annotation getStateAnnotation()
 	{
 		// TODO: implement this method
@@ -241,7 +248,7 @@ public class XpectArgumentImpl extends EObjectImpl implements XpectArgument
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (index: ");
 		result.append(index);
 		result.append(')');

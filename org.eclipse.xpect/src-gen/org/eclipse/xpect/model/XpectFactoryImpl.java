@@ -143,6 +143,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectFile createXpectFile()
 	{
 		XpectFileImplCustom xpectFile = new XpectFileImplCustom();
@@ -154,6 +155,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectTest createXpectTest()
 	{
 		XpectTestImplCustom xpectTest = new XpectTestImplCustom();
@@ -165,6 +167,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectIgnore createXpectIgnore()
 	{
 		XpectIgnoreImpl xpectIgnore = new XpectIgnoreImpl();
@@ -176,6 +179,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectInvocation createXpectInvocation()
 	{
 		XpectInvocationImplCustom xpectInvocation = new XpectInvocationImplCustom();
@@ -187,6 +191,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectArgument createXpectArgument()
 	{
 		XpectArgumentImplCustom xpectArgument = new XpectArgumentImplCustom();
@@ -198,6 +203,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Member createMember()
 	{
 		MemberImpl member = new MemberImpl();
@@ -209,6 +215,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Text createText()
 	{
 		TextImpl text = new TextImpl();
@@ -220,6 +227,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Assignment createAssignment()
 	{
 		AssignmentImplCustom assignment = new AssignmentImplCustom();
@@ -231,6 +239,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value createValue()
 	{
 		ValueImpl value = new ValueImpl();
@@ -242,6 +251,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component createComponent()
 	{
 		ComponentImplCustom component = new ComponentImplCustom();
@@ -253,6 +263,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Literal createLiteral()
 	{
 		LiteralImpl literal = new LiteralImpl();
@@ -264,6 +275,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClassLiteral createClassLiteral()
 	{
 		ClassLiteralImpl classLiteral = new ClassLiteralImpl();
@@ -275,6 +287,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BooleanLiteral createBooleanLiteral()
 	{
 		BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
@@ -286,6 +299,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntLiteral createIntLiteral()
 	{
 		IntLiteralImpl intLiteral = new IntLiteralImpl();
@@ -297,6 +311,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringLiteral createStringLiteral()
 	{
 		StringLiteralImpl stringLiteral = new StringLiteralImpl();
@@ -348,6 +363,7 @@ public class XpectFactoryImpl extends EFactoryImpl implements XpectFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XpectPackage getXpectPackage()
 	{
 		return (XpectPackage)getEPackage();

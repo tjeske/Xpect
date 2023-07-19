@@ -12,14 +12,20 @@
 
 package org.eclipse.xpect;
 
+import org.eclipse.xpect.services.NullResourceDescriptions;
+import org.eclipse.xpect.services.XpectFragmentProvider;
+import org.eclipse.xpect.services.XpectValueConverter;
+import org.eclipse.xpect.validation.XpectJavaValidator;
+import org.eclipse.xpect.validation.XpectValidator;
+import org.eclipse.xtext.common.types.TypesFactory;
+import org.eclipse.xtext.common.types.access.ClasspathTypeProviderFactory;
+import org.eclipse.xtext.common.types.access.IJvmTypeProvider;
 import org.eclipse.xtext.conversion.IValueConverterService;
 import org.eclipse.xtext.resource.IFragmentProvider;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
+import org.eclipse.xtext.service.SingletonBinding;
 import org.eclipse.xtext.validation.CompositeEValidator;
-import org.eclipse.xpect.services.NullResourceDescriptions;
-import org.eclipse.xpect.services.XpectFragmentProvider;
-import org.eclipse.xpect.services.XpectValueConverter;
 
 import com.google.inject.Binder;
 import com.google.inject.name.Names;
@@ -53,6 +59,19 @@ public class XpectRuntimeModule extends AbstractXpectRuntimeModule {
 	
 	public void configureRuntimeLexer(com.google.inject.Binder binder) {
 		binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.parser.antlr.LexerBindings.RUNTIME)).to(org.eclipse.xpect.lexer.XpectRT.class);
+	}
+	
+	@SingletonBinding(eager=true)
+	public Class<? extends XpectValidator> bindXpectValidator() {
+		return XpectJavaValidator.class;
+	}
+	
+	public Class<? extends IJvmTypeProvider.Factory> bindIJvmTypeProvider$Factory() {
+		return ClasspathTypeProviderFactory.class;
+	}
+	
+	public TypesFactory bindTypesFactoryToInstance() {
+		return TypesFactory.eINSTANCE;
 	}
 
 }

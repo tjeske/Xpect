@@ -80,12 +80,7 @@ Workflow {
 			//  }
 			}
 
-			fragment = de.itemis.statefullexer.StatefulLexerFragment {
-				runtime = true
-				lexerBaseClass = "org.eclipse.xpect.services.Lexer"
-				antlrParam = "-lib"
-				antlrParam = "${runtimeProject}/src-gen/org/eclipse/xpect/parser/antlr/lexer"
-			}
+			
 
 			// java-based API for validation
 			fragment = validation.JavaValidatorFragment {
@@ -121,18 +116,7 @@ Workflow {
 			// generates a more lightweight Antlr parser and lexer tailored for content assist
 			fragment = parser.antlr.ex.ca.ContentAssistParserGeneratorFragment {}
 
-			fragment = de.itemis.statefullexer.StatefulLexerFragment {
-				lexerBaseClass = "org.eclipse.xpect.services.Lexer"
-				highlighting = true
-				antlrParam = "-lib"
-				antlrParam = "${runtimeProject}.ui/src-gen/org/eclipse/xpect/ui/contentassist/antlr/lexer"
-			}
-			fragment = de.itemis.statefullexer.StatefulLexerFragment {
-				lexerBaseClass = "org.eclipse.xpect.ui.services.Lexer"
-				contentAssist = true
-				antlrParam = "-lib"
-				antlrParam = "${runtimeProject}.ui/src-gen/org/eclipse/xpect/ui/contentassist/antlr/lexer"
-			}
+			
 
 			// generates junit test support classes into Generator#pathTestProject
 			// fragment = junit.Junit4Fragment {}

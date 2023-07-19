@@ -38,7 +38,7 @@ import com.google.inject.Inject;
  * @author Moritz Eysholdt - Initial contribution and API
  */
 @SuppressWarnings("restriction")
-public class XpectJavaValidator extends AbstractXpectJavaValidator {
+public class XpectJavaValidator extends XpectValidator {
 
 	@Inject
 	private URIDelegationHandler uriDelegationHandler;

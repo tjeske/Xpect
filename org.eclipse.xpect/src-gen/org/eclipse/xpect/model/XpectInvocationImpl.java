@@ -42,6 +42,7 @@ import org.eclipse.xpect.parameter.IStatementRelatedRegion;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.xpect.model.XpectInvocationImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XpectInvocationImpl#isIgnore <em>Ignore</em>}</li>
@@ -51,7 +52,6 @@ import org.eclipse.xpect.parameter.IStatementRelatedRegion;
  *   <li>{@link org.eclipse.xpect.model.XpectInvocationImpl#getRelatedRegions <em>Related Regions</em>}</li>
  *   <li>{@link org.eclipse.xpect.model.XpectInvocationImpl#getExtendedRegion <em>Extended Region</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -193,6 +193,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId()
 	{
 		return id;
@@ -203,6 +204,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIgnore()
 	{
 		return ignore;
@@ -213,6 +215,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIgnore(boolean newIgnore)
 	{
 		boolean oldIgnore = ignore;
@@ -226,6 +229,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isFixme()
 	{
 		return fixme;
@@ -236,6 +240,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFixme(boolean newFixme)
 	{
 		boolean oldFixme = fixme;
@@ -249,6 +254,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XjmXpectMethod getMethod()
 	{
 		if (method != null && method.eIsProxy())
@@ -279,6 +285,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(XjmXpectMethod newMethod)
 	{
 		XjmXpectMethod oldMethod = method;
@@ -292,6 +299,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<XpectArgument> getArguments()
 	{
 		if (arguments == null)
@@ -306,6 +314,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<IStatementRelatedRegion> getRelatedRegions()
 	{
 		if (relatedRegions == null)
@@ -320,6 +329,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IStatementRelatedRegion getExtendedRegion()
 	{
 		return extendedRegion;
@@ -330,6 +340,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtendedRegion(IStatementRelatedRegion newExtendedRegion)
 	{
 		IStatementRelatedRegion oldExtendedRegion = extendedRegion;
@@ -343,6 +354,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMethodName()
 	{
 		// TODO: implement this method
@@ -355,6 +367,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public <T extends IStatementRelatedRegion> T getRelatedRegion(Class<T> type)
 	{
 		// TODO: implement this method
@@ -505,7 +518,7 @@ public class XpectInvocationImpl extends MemberImpl implements XpectInvocation
 	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: ");
 		result.append(id);
 		result.append(", ignore: ");
